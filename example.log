@@ -1,0 +1,305 @@
+2024-02-26 11:28:11,122 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:28:12,459 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_minutely HTTP/1.1" 200 36
+2024-02-26 11:28:12,460 - INFO - switch_case: save_minutely, response: 200 ,result: Triggered Bitstamp API minutely data
+2024-02-26 11:32:07,678 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:32:08,820 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_hourly HTTP/1.1" 200 34
+2024-02-26 11:32:08,824 - INFO - switch_case: save_hourly, response: 200 ,result: Triggered Bitstamp API hourly data
+2024-02-26 11:32:36,035 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:32:36,759 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_hourly HTTP/1.1" 200 34
+2024-02-26 11:32:36,759 - INFO - switch_case: save_hourly, response: 200 ,result: Triggered Bitstamp API hourly data
+2024-02-26 11:33:10,740 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:33:11,297 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:33:11,884 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_hourly HTTP/1.1" 200 34
+2024-02-26 11:33:11,884 - INFO - switch_case: save_hourly, response: 200 ,result: Triggered Bitstamp API hourly data
+2024-02-26 11:33:12,417 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_minutely HTTP/1.1" 200 36
+2024-02-26 11:33:12,417 - INFO - switch_case: save_minutely, response: 200 ,result: Triggered Bitstamp API minutely data
+2024-02-26 11:34:33,487 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:34:38,775 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_hourly HTTP/1.1" 200 34
+2024-02-26 11:34:38,777 - INFO - switch_case: save_hourly, response: 200 ,result: Triggered Bitstamp API hourly data
+2024-02-26 11:34:56,998 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:34:57,561 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_minutely HTTP/1.1" 200 36
+2024-02-26 11:34:57,561 - INFO - switch_case: save_minutely, response: 200 ,result: Triggered Bitstamp API minutely data
+2024-02-26 11:38:11,120 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:38:12,036 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_minutely HTTP/1.1" 200 36
+2024-02-26 11:38:12,036 - INFO - switch_case: save_minutely, response: 200 ,result: Triggered Bitstamp API minutely data
+2024-02-26 11:39:45,835 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:39:47,487 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_daily HTTP/1.1" 200 33
+2024-02-26 11:39:47,490 - INFO - switch_case: save_daily, response: 200 ,result: Triggered Bitstamp API daily data
+2024-02-26 11:41:01,917 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:41:02,133 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/scrap_today HTTP/1.1" 404 4298
+2024-02-26 11:41:02,133 - INFO - switch_case: scrap_today, response: 404 ,result: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Page not found at /scrap/api/scrap_today</title>
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <style type="text/css">
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; background:#eee; color:#000; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; margin-bottom:.4em; }
+    h1 span { font-size:60%; color:#666; font-weight:normal; }
+    table { border:none; border-collapse: collapse; width:100%; }
+    td, th { vertical-align:top; padding:2px 3px; }
+    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    #info { background:#f6f6f6; }
+    #info ol { margin: 0.5em 4em; }
+    #info ol li { font-family: monospace; }
+    #summary { background: #ffc; }
+    #explanation { background:#eee; border-bottom: 0px none; }
+    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5em; margin: 10px 0 10px 0; }
+  </style>
+</head>
+<body>
+  <div id="summary">
+    <h1>Page not found <span>(404)</span></h1>
+    
+    <table class="meta">
+      <tr>
+        <th>Request Method:</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>Request URL:</th>
+        <td>http://127.0.0.1:8000/scrap/api/scrap_today</td>
+      </tr>
+      
+    </table>
+  </div>
+  <div id="info">
+    
+      <p>
+      Using the URLconf defined in <code>scrapperE.urls</code>,
+      Django tried these URL patterns, in this order:
+      </p>
+      <ol>
+        
+          <li>
+            
+                admin/
+                
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+                all_post/
+                [name='all_post']
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+                scrap_today/
+                [name='scrap_today']
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+                error_post/
+                [name='error_post']
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+                api/bitstamp/add
+                [name='add_bitstamp']
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+                api/bitstamphour/add
+                [name='add_bitstamphour']
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+                api/bitstampminute/add
+                [name='add_bitstampminute']
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+                api/bitstamp/save_daily
+                [name='save_bitstamp_daily']
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+                api/bitstamp/save_hourly
+                [name='save_bitstamp_hourly']
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+                api/bitstamp/save_minutely
+                [name='save_bitstamp_minutely']
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+                api/post/&lt;str:post_id&gt;/
+                [name='get_post_by_id']
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+                api/error_log/add/
+                [name='add_error_log']
+            
+          </li>
+        
+      </ol>
+      <p>
+        
+          The current path, <code>scrap/api/scrap_today</code>,
+        
+        didn’t match any of these.
+      </p>
+    
+  </div>
+
+  <div id="explanation">
+    <p>
+      You’re seeing this error because you have <code>DEBUG = True</code> in
+      your Django settings file. Change that to <code>False</code>, and Django
+      will display a standard 404 page.
+    </p>
+  </div>
+</body>
+</html>
+
+2024-02-26 11:41:45,216 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:41:45,226 - DEBUG - http://127.0.0.1:8000 "GET /scrap_today HTTP/1.1" 404 2219
+2024-02-26 11:41:45,226 - INFO - switch_case: scrap_today, response: 404 ,result: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Page not found at /scrap_today</title>
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <style type="text/css">
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; background:#eee; color:#000; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; margin-bottom:.4em; }
+    h1 span { font-size:60%; color:#666; font-weight:normal; }
+    table { border:none; border-collapse: collapse; width:100%; }
+    td, th { vertical-align:top; padding:2px 3px; }
+    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    #info { background:#f6f6f6; }
+    #info ol { margin: 0.5em 4em; }
+    #info ol li { font-family: monospace; }
+    #summary { background: #ffc; }
+    #explanation { background:#eee; border-bottom: 0px none; }
+    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5em; margin: 10px 0 10px 0; }
+  </style>
+</head>
+<body>
+  <div id="summary">
+    <h1>Page not found <span>(404)</span></h1>
+    
+    <table class="meta">
+      <tr>
+        <th>Request Method:</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>Request URL:</th>
+        <td>http://127.0.0.1:8000/scrap_today</td>
+      </tr>
+      
+    </table>
+  </div>
+  <div id="info">
+    
+      <p>
+      Using the URLconf defined in <code>scrapperE.urls</code>,
+      Django tried these URL patterns, in this order:
+      </p>
+      <ol>
+        
+          <li>
+            
+                admin/
+                
+            
+          </li>
+        
+          <li>
+            
+                scrap/
+                
+            
+          </li>
+        
+      </ol>
+      <p>
+        
+          The current path, <code>scrap_today</code>,
+        
+        didn’t match any of these.
+      </p>
+    
+  </div>
+
+  <div id="explanation">
+    <p>
+      You’re seeing this error because you have <code>DEBUG = True</code> in
+      your Django settings file. Change that to <code>False</code>, and Django
+      will display a standard 404 page.
+    </p>
+  </div>
+</body>
+</html>
+
+2024-02-26 11:42:00,755 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 11:42:00,764 - DEBUG - http://127.0.0.1:8000 "GET /scrap/scrap_today HTTP/1.1" 301 None
+2024-02-26 11:42:00,765 - DEBUG - Resetting dropped connection: 127.0.0.1
+2024-02-26 11:42:08,357 - DEBUG - http://127.0.0.1:8000 "GET /scrap/scrap_today/ HTTP/1.1" 200 13
+2024-02-26 11:42:08,357 - INFO - switch_case: scrap_today, response: 200 ,result: Hello, World!
