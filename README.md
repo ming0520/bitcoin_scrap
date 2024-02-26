@@ -23,17 +23,24 @@ To install ScrapperE, follow these steps:
     cd scrapperE
     ```
 
-3. Create a conda environment:
+3. Rename the environment name in `environment.yml` file:
+    ```
+    Open the `environment.yml` file and replace the `name: fws-dell` line with `name: new_environment_name`
+    ```
+Please replace `'new_environment_name'` with your actual environment name.
+    
+
+4. Create a conda environment:
     ```
     conda env create -f environment.yml
     ```
 
-4. Activate the conda environment:
+5. Activate the conda environment:
     ```
     conda activate "your_environment_name"
     ```
 
-5. Configure the database in `scrapperE\scrapperE\settings.py`:
+6. Configure the database in `scrapperE\scrapperE\settings.py`:
     ```
     DATABASES = {
         'default': {
