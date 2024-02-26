@@ -58,6 +58,11 @@ set PYTHONIOENCODING=utf-8
 python manage.py dumpdata > database_dump.json
 ```
 
+## Navigate to Views
+
+For more details about the views, please refer to [Views Readme](scrapperE/scrap/ViewsReadme.md)
+
+
 ## Data Sources
 
 ### Bitcoin
