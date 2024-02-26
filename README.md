@@ -8,6 +8,10 @@ Before you begin, ensure you have met the following requirements:
 
 * You have installed the latest version of Anaconda.
 * You have a `<Windows/Linux/Mac>` machine. State which OS is supported/required.
+* You will also need MySQL Workbench for this project. You can download it from the following link: 
+  [MySQL Workbench](https://dev.mysql.com/downloads/installer/)
+  ![alt text](image.png)
+
 
 ## Installing ScrapperE
 
