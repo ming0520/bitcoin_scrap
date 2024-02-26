@@ -55,7 +55,7 @@ To use ScrapperE, follow these steps - dont use this first:
 ## Data Sources
 
 ### Bitcoin
-1. Bitcoin price OHLC: [bitstamp.net/market/tradeview/](https://www.bitstamp.net/market/tradeview/)
+1. [Bitstamp OHLC](https://www.bitstamp.net/market/tradeview/)
 
 ### Reddit Communities
 
