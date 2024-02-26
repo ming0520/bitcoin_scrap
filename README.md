@@ -15,7 +15,7 @@ To install ScrapperE, follow these steps:
 
 1. Clone the repository:
     ```
-    git clone https://github.com/yourusername/scrapperE.git
+    git clone https://github.com/ming0520/bitcoin_scrap.git
     ```
 
 2. Navigate to the project directory:
