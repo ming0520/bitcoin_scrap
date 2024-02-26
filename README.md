@@ -33,6 +33,22 @@ To install ScrapperE, follow these steps:
     conda activate "your_environment_name"
     ```
 
+5. Configure the database in `scrapperE\scrapperE\settings.py`:
+    ```
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'your_database_name',
+            'USER': 'your_username',
+            'PASSWORD': 'your_password',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
+    ```
+Please replace `'your_database_name'`, `'your_username'`, and `'your_password'` with your actual database name, username, and password respectively.
+
+
 ## Using ScrapperE
 
 To use ScrapperE, follow these steps
