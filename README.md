@@ -30,16 +30,16 @@ To install ScrapperE, follow these steps:
 
 4. Activate the conda environment:
     ```
-    conda activate your_environment_name
+    conda activate "your_environment_name"
     ```
 
 ## Using ScrapperE
 
-To use ScrapperE, follow these steps - dont use this first:
+To use ScrapperE, follow these steps
 
 1. Load the database data:
     ```
-    python manage.py loaddata dumps/data.json
+    python manage.py loaddata database_dump.json
     ```
 
 2. Apply migrations:
@@ -51,6 +51,12 @@ To use ScrapperE, follow these steps - dont use this first:
     ```
     python manage.py runserver
     ```
+
+## Dump Database data to database_dump.json
+```
+set PYTHONIOENCODING=utf-8
+python manage.py dumpdata > database_dump.json
+```
 
 ## Data Sources
 
