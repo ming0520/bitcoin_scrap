@@ -1,7 +1,11 @@
 SELECT count(*) FROM scrapper_experiment2.scrap_postraw;
-SELECT count(*) FROM scrapper_experiment2.scrap_bitstampdata where symbol = 'SCHEDULER_TEST';
+
+SELECT count(*) FROM scrapper_experiment2.scrap_bitstampdatahour
+-- where symbol = 'SCHEDULER_TEST'
+;
+
 SELECT * FROM scrapper_experiment2.scrap_errorlog;
-DELETE FROM scrapper_experiment2.scrap_bitstampdatahour WHERE symbol = 'SCHEDULER_TEST';
+-- DELETE FROM scrapper_experiment2.scrap_bitstampdatahour WHERE symbol = 'SCHEDULER_TEST';
 SELECT * 
 FROM scrapper_experiment2.scrap_bitstampdatahour
 ORDER BY added_at DESC 
