@@ -1,0 +1,215 @@
+2024-02-26 18:25:05,436 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-26 18:25:06,778 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-26 18:25:11,741 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 18:25:11,770 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-26 18:25:59,237 - INFO - C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrap\views.py changed, reloading.
+2024-02-26 18:26:31,208 - INFO - C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrap\views.py changed, reloading.
+2024-02-26 18:27:27,950 - INFO - C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrap\views.py changed, reloading.
+2024-02-26 18:27:54,890 - INFO - C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrap\views.py changed, reloading.
+2024-02-26 18:28:02,650 - INFO - C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrap\views.py changed, reloading.
+2024-02-26 18:28:35,554 - INFO - C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrap\views.py changed, reloading.
+2024-02-26 18:30:05,133 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-26 18:30:27,404 - ERROR - Internal Server Error: /scrap/api/bitstamp/save_minutely
+Traceback (most recent call last):
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\urllib3\connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\urllib3\connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\urllib3\connectionpool.py", line 1058, in _validate_conn
+    conn.connect()
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\urllib3\connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001B2888CB080>, 'Connection to www.bitstamp.net timed out. (connect timeout=None)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\urllib3\connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.bitstamp.net', port=443): Max retries exceeded with url: /api/v2/ohlc/btcusd/?step=3600&limit=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001B2888CB080>, 'Connection to www.bitstamp.net timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrap\views.py", line 43, in call_bitsamp_api
+    data = requests.get(ohlc_url)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\requests\adapters.py", line 507, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.bitstamp.net', port=443): Max retries exceeded with url: /api/v2/ohlc/btcusd/?step=3600&limit=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001B2888CB080>, 'Connection to www.bitstamp.net timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Zhong_ming_Tan\AppData\Local\anaconda3\envs\fws-dell\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrap\views.py", line 122, in save_bitstamp_minutely
+    call_bitsamp_api(ohlc_url,minute_url,error_log_url)
+  File "C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrap\views.py", line 80, in call_bitsamp_api
+    "error_content": data.to_dict() if hasattr(data, 'to_dict') else str(data)
+                                               ^^^^
+UnboundLocalError: cannot access local variable 'data' where it is not associated with a value
+2024-02-26 18:35:16,181 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-26 18:35:17,161 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-26 18:35:22,846 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 18:35:22,860 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-26 18:35:22,927 - INFO - Data successfully added to the database
+2024-02-26 18:40:08,203 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-26 18:40:09,513 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-26 18:40:09,515 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 18:40:09,542 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-26 18:40:09,579 - INFO - Data successfully added to the database
+2024-02-26 18:42:04,212 - INFO - C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrap\views.py changed, reloading.
+2024-02-26 18:42:36,752 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-26 18:42:38,012 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-26 18:42:38,238 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 18:42:38,250 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstamp/add HTTP/1.1" 200 329
+2024-02-26 18:42:38,250 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstamp/add status: 200 response: {"id":6784,"unix":1708941600,"date":"2024-02-26T10:00:00Z","local_date":"2024-02-26T18:00:00Z","symbol":"SCHEDULER_TEST","open":"50963.0000000000","high":"51233.0000000000","low":"50963.0000000000","close":"51208.0000000000","volume_btc":"37.6984905000","volume_usd":"1930464.3015240000","added_at":"2024-02-26T10:42:38.246150Z"}
+2024-02-26 18:42:38,251 - INFO - Data successfully added to the database
+2024-02-26 18:45:05,516 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-26 18:45:06,773 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-26 18:45:06,777 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 18:45:06,797 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-26 18:45:06,799 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":24,"unix":1708941600,"date":"2024-02-26T10:00:00Z","local_date":"2024-02-26T18:00:00Z","symbol":"SCHEDULER_TEST","open":"50963.0000000000","high":"51233.0000000000","low":"50963.0000000000","close":"51188.0000000000","volume_btc":"37.9130609200","volume_usd":"1940693.7623729599","added_at":"2024-02-26T10:45:06.793248Z"}
+2024-02-26 18:45:06,799 - INFO - Data successfully added to the database
+2024-02-26 18:50:05,302 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-26 18:50:07,043 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-26 18:50:07,048 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 18:50:07,067 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-26 18:50:07,068 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":25,"unix":1708941600,"date":"2024-02-26T10:00:00Z","local_date":"2024-02-26T18:00:00Z","symbol":"SCHEDULER_TEST","open":"50963.0000000000","high":"51233.0000000000","low":"50963.0000000000","close":"51229.0000000000","volume_btc":"38.4815785600","volume_usd":"1971372.7880502401","added_at":"2024-02-26T10:50:07.064675Z"}
+2024-02-26 18:50:07,068 - INFO - Data successfully added to the database
+2024-02-26 18:55:04,530 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-26 18:55:05,677 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-26 18:55:05,682 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-26 18:55:05,704 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-26 18:55:05,704 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":26,"unix":1708941600,"date":"2024-02-26T10:00:00Z","local_date":"2024-02-26T18:00:00Z","symbol":"SCHEDULER_TEST","open":"50963.0000000000","high":"51233.0000000000","low":"50963.0000000000","close":"51220.0000000000","volume_btc":"38.7626133200","volume_usd":"1985421.0542504000","added_at":"2024-02-26T10:55:05.699751Z"}
+2024-02-26 18:55:05,705 - INFO - Data successfully added to the database
+2024-02-27 06:29:18,693 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 06:29:18,870 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 06:29:20,134 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 06:29:20,136 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 06:29:20,146 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstamphour/add HTTP/1.1" 200 330
+2024-02-27 06:29:20,147 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstamphour/add status: 200 response: {"id":86362,"unix":1708984800,"date":"2024-02-26T22:00:00Z","local_date":"2024-02-27T06:00:00Z","symbol":"SCHEDULER_TEST","open":"54679.0000000000","high":"54835.0000000000","low":"54543.0000000000","close":"54641.0000000000","volume_btc":"20.2012840100","volume_usd":"1103818.3595904100","added_at":"2024-02-26T22:29:20.143598Z"}
+2024-02-27 06:29:20,147 - INFO - Data successfully added to the database
+2024-02-27 06:29:20,242 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 06:29:20,244 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 06:29:20,273 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-27 06:29:20,275 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":27,"unix":1708984800,"date":"2024-02-26T22:00:00Z","local_date":"2024-02-27T06:00:00Z","symbol":"SCHEDULER_TEST","open":"54679.0000000000","high":"54835.0000000000","low":"54543.0000000000","close":"54641.0000000000","volume_btc":"20.2012840100","volume_usd":"1103818.3595904100","added_at":"2024-02-26T22:29:20.269989Z"}
+2024-02-27 06:29:20,277 - INFO - Data successfully added to the database
+2024-02-27 06:30:14,781 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 06:30:15,427 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 06:30:15,428 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 06:30:15,441 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-27 06:30:15,444 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":28,"unix":1708984800,"date":"2024-02-26T22:00:00Z","local_date":"2024-02-27T06:00:00Z","symbol":"SCHEDULER_TEST","open":"54679.0000000000","high":"54835.0000000000","low":"54543.0000000000","close":"54606.0000000000","volume_btc":"20.3715127300","volume_usd":"1112406.8241343799","added_at":"2024-02-26T22:30:15.438321Z"}
+2024-02-27 06:30:15,449 - INFO - Data successfully added to the database
+2024-02-27 07:17:38,959 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 07:17:39,816 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 07:17:40,038 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 07:17:40,040 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 07:17:40,079 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstamphour/add HTTP/1.1" 200 329
+2024-02-27 07:17:40,086 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstamphour/add status: 200 response: {"id":86363,"unix":1708988400,"date":"2024-02-26T23:00:00Z","local_date":"2024-02-27T07:00:00Z","symbol":"SCHEDULER_TEST","open":"54710.0000000000","high":"54711.0000000000","low":"54552.0000000000","close":"54591.0000000000","volume_btc":"16.5665903300","volume_usd":"904386.7327050300","added_at":"2024-02-26T23:17:40.075796Z"}
+2024-02-27 07:17:40,087 - INFO - Data successfully added to the database
+2024-02-27 07:17:40,921 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 07:17:40,922 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 07:17:40,965 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 326
+2024-02-27 07:17:40,975 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":29,"unix":1708988400,"date":"2024-02-26T23:00:00Z","local_date":"2024-02-27T07:00:00Z","symbol":"SCHEDULER_TEST","open":"54710.0000000000","high":"54711.0000000000","low":"54552.0000000000","close":"54591.0000000000","volume_btc":"16.5665903300","volume_usd":"904386.7327050300","added_at":"2024-02-26T23:17:40.960569Z"}
+2024-02-27 07:17:40,981 - INFO - Data successfully added to the database
+2024-02-27 08:29:34,119 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 08:29:35,162 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 08:29:35,164 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 08:29:35,276 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstamphour/add HTTP/1.1" 200 330
+2024-02-27 08:29:35,347 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstamphour/add status: 200 response: {"id":86364,"unix":1708992000,"date":"2024-02-27T00:00:00Z","local_date":"2024-02-27T08:00:00Z","symbol":"SCHEDULER_TEST","open":"54534.0000000000","high":"54715.0000000000","low":"54519.0000000000","close":"54658.0000000000","volume_btc":"27.3733571500","volume_usd":"1496172.9551047000","added_at":"2024-02-27T00:29:35.219286Z"}
+2024-02-27 08:29:35,461 - INFO - Data successfully added to the database
+2024-02-27 08:29:48,511 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 08:29:49,458 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 08:29:49,459 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 08:29:49,467 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-27 08:29:49,467 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":30,"unix":1708992000,"date":"2024-02-27T00:00:00Z","local_date":"2024-02-27T08:00:00Z","symbol":"SCHEDULER_TEST","open":"54534.0000000000","high":"54715.0000000000","low":"54519.0000000000","close":"54657.0000000000","volume_btc":"27.3757827900","volume_usd":"1496278.1599530298","added_at":"2024-02-27T00:29:49.465569Z"}
+2024-02-27 08:29:49,468 - INFO - Data successfully added to the database
+2024-02-27 08:30:10,029 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 08:30:10,635 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 08:30:10,647 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 08:30:10,656 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-27 08:30:10,656 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":31,"unix":1708992000,"date":"2024-02-27T00:00:00Z","local_date":"2024-02-27T08:00:00Z","symbol":"SCHEDULER_TEST","open":"54534.0000000000","high":"54715.0000000000","low":"54519.0000000000","close":"54661.0000000000","volume_btc":"27.4246417700","volume_usd":"1499058.3437899700","added_at":"2024-02-27T00:30:10.653645Z"}
+2024-02-27 08:30:10,657 - INFO - Data successfully added to the database
+2024-02-27 08:35:05,824 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 08:35:07,072 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 08:35:07,074 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 08:35:07,088 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-27 08:35:07,089 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":32,"unix":1708992000,"date":"2024-02-27T00:00:00Z","local_date":"2024-02-27T08:00:00Z","symbol":"SCHEDULER_TEST","open":"54534.0000000000","high":"54715.0000000000","low":"54519.0000000000","close":"54550.0000000000","volume_btc":"28.5843971900","volume_usd":"1559278.8667145001","added_at":"2024-02-27T00:35:07.084220Z"}
+2024-02-27 08:35:07,089 - INFO - Data successfully added to the database
+2024-02-27 08:40:05,229 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 08:40:06,393 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 08:40:06,398 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 08:40:06,415 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-27 08:40:06,417 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":33,"unix":1708992000,"date":"2024-02-27T00:00:00Z","local_date":"2024-02-27T08:00:00Z","symbol":"SCHEDULER_TEST","open":"54534.0000000000","high":"54715.0000000000","low":"54501.0000000000","close":"54519.0000000000","volume_btc":"32.3598763400","volume_usd":"1764228.0981804600","added_at":"2024-02-27T00:40:06.411797Z"}
+2024-02-27 08:40:06,417 - INFO - Data successfully added to the database
+2024-02-27 08:45:05,630 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 08:45:06,717 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 08:45:06,718 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 08:45:06,730 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-27 08:45:06,730 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":34,"unix":1708992000,"date":"2024-02-27T00:00:00Z","local_date":"2024-02-27T08:00:00Z","symbol":"SCHEDULER_TEST","open":"54534.0000000000","high":"54715.0000000000","low":"54500.0000000000","close":"54517.0000000000","volume_btc":"33.9000478000","volume_usd":"1848128.9059126002","added_at":"2024-02-27T00:45:06.726176Z"}
+2024-02-27 08:45:06,730 - INFO - Data successfully added to the database
+2024-02-27 08:50:32,541 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-27 08:50:33,720 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-27 08:50:33,722 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-27 08:50:33,735 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-27 08:50:33,736 - INFO - api_endpoint: http://127.0.0.1:8000/scrap/api/bitstampminute/add status: 200 response: {"id":35,"unix":1708992000,"date":"2024-02-27T00:00:00Z","local_date":"2024-02-27T08:00:00Z","symbol":"SCHEDULER_TEST","open":"54534.0000000000","high":"54715.0000000000","low":"54500.0000000000","close":"54577.0000000000","volume_btc":"35.0401707100","volume_usd":"1912387.3968396700","added_at":"2024-02-27T00:50:33.731003Z"}
+2024-02-27 08:50:33,736 - INFO - Data successfully added to the database
