@@ -1,0 +1,9 @@
+Based on the models you have in your code, here are some measures you could analyze by year:
+
+PostRaw: Number of posts -done, average post score -done, number of unique authors-done, number of posts per platform source-done.
+
+CommentRaw: Number of comments, average comment score, number of unique comment authors, number of comments per post.
+
+ErrorPost: Number of error posts, frequency of different error messages.
+
+BitstampData, BitstampDataHour, BitstampDataMinute: Average, minimum, maximum, and total of 'open', 'high', 'low', 'close', 'volume_btc', and 'volume_usd' values. You could also analyze these measures per symbol.

@@ -18,6 +18,16 @@ urlpatterns = [
     path("api/bitstamp/save_daily", views.save_bitstamp_daily, name="save_bitstamp_daily"),
     path("api/bitstamp/save_hourly", views.save_bitstamp_hourly, name="save_bitstamp_hourly"),
     path("api/bitstamp/save_minutely", views.save_bitstamp_minutely, name="save_bitstamp_minutely"),
+
+    path('', views.dashboard_with_pivot, name='dashboard_with_pivot'),
+    path('bitcoin_hourly_data', views.bitcoin_hourly_data, name='bitcoin_hourly_data'),
+    path('post_raw_data', views.post_raw, name='post_raw_data'),
+
+    # path('', views.sneat, name='sneat'),
+
+    # path('', views.dashboard_d3js, name='dashboard_d3js'),
+    # path('bitcoin_hourly_data_close', views.bitcoin_hourly_data_close, name='bitcoin_hourly_data_close'),
+
     # path("api/bitstamp/get_daily", views.get_bitstamp_daily, name="get_bitstamp_daily"),    
 
     # Bitstamp Crud
