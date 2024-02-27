@@ -20,6 +20,13 @@ import json
 import requests
 import pytz
 
+import logging
+# Setting the basic configuration for logging, such as the level, the format and the file name
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s', filename='C:\\Other Project\\Ads\\Bitcoin Scraping\\views.log')
+
+# Creating a logger object
+logger = logging.getLogger()
+
 currency_pair = "btcusd"
 # ohlc_url = f"https://www.bitstamp.net/api/v2/ticker/{currency_pair}/"
 ohlc_url = f'https://www.bitstamp.net/api/v2/ohlc/{currency_pair}/?step=3600&limit=1'
@@ -47,8 +54,8 @@ def call_bitsamp_api(ohlc_url,api_endpoint,error_log_url):
         # ohlc_data['symbol'] = bitstamp_data['pair']
 
         # TEST
-        # ohlc_data['symbol'] = 'SCHEDULER_TEST'
-        ohlc_data['symbol'] = 'HUMAN_TEST'
+        ohlc_data['symbol'] = 'SCHEDULER_TEST'
+        # ohlc_data['symbol'] = 'HUMAN_TEST'
 
         # Convert the timestamp to datetime and localize it to UTC
         dt = datetime.fromtimestamp(int(ohlc_data['unix']), tz=pytz.UTC)
@@ -77,8 +84,10 @@ def call_bitsamp_api(ohlc_url,api_endpoint,error_log_url):
     try:
         response = requests.post(api_endpoint, json=ohlc_data_dict)
         print('api_endpoint:',api_endpoint, 'response:',response.status_code, 'response:',response.text)
+        logger.info(f'api_endpoint: {api_endpoint} status: {response.status_code} response: {response.text}')
         if response.status_code == 200:
             print('Data successfully added to the database')
+            logger.info('Data successfully added to the database')
         else:
 
             error_data = {
@@ -135,8 +144,23 @@ def get_post_by_id(request, post_id):
         return Response(serializer.data)
     except PostRaw.DoesNotExist:
         # return HttpResponse(status=404)
+        logger.error(f'Post with post_id {post_id} not found', status=status.HTTP_404_NOT_FOUND)
         return Response({'error': f'Post with post_id {post_id} not found'}, status=status.HTTP_404_NOT_FOUND)
 
+@api_view(['GET'])
+def get_post_by_status(request, status):
+    try:
+        # posts = PostRaw.objects.filter(status=status)
+        posts = PostRaw.objects.filter(status=status)[:20]
+        if posts:
+            serializer = PostRawSerializer(posts, many=True)
+            return Response(serializer.data)
+        else:
+            logger.error(f'No posts with status {status} found', status=status.HTTP_404_NOT_FOUND)
+            return Response({'error': f'No posts with status {status} found'}, status=status.HTTP_404_NOT_FOUND)
+    except PostRaw.DoesNotExist:
+        logger.error(f'Post with status {status} not found', status=status.HTTP_404_NOT_FOUND)
+        return Response({'error': f'Post with status {status} not found'}, status=status.HTTP_404_NOT_FOUND)
 
 @api_view(['POST'])
 def add_error_log(request):
@@ -144,6 +168,7 @@ def add_error_log(request):
     if serializer.is_valid():
         serializer.save()
         return Response(serializer.data)
+    logger.error(f'Failed to save error to database', status=status.HTTP_400_BAD_REQUEST)
     errorLog = ErrorLog.objects.create(
         error_message=serializer.errors,
         error_type="Failed to save error to database",
