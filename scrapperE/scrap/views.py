@@ -63,43 +63,48 @@ day_url = "http://127.0.0.1:8000/scrap/api/bitstamp/add"
 error_log_url = "http://127.0.0.1:8000/scrap/api/error_log/add/"
 
 
+
+# This function is used to call the Bitstamp API, process the data and post it to the specified endpoint.
+# If any error occurs during the process, it is logged to the specified error log URL.
 def call_bitsamp_api(ohlc_url,api_endpoint,error_log_url):
     ohlc_data_dict = {}
 
     try:
+        # Fetch data from the Bitstamp API
         data = requests.get(ohlc_url)
 
+        # Extract the relevant data
         bitstamp_data = data.json()['data']
 
+        # Process the data
         ohlc_data = bitstamp_data['ohlc'][0]
         ohlc_data['unix'] = ohlc_data.pop('timestamp')
         ohlc_data['volume_btc'] = ohlc_data.pop('volume')
+
         # Convert the Unix timestamp to UTC time
         ohlc_data['date'] = datetime.utcfromtimestamp(int(ohlc_data['unix'])).strftime('%Y-%m-%dT%H:%M:%S')
         
-        # PROD
-        # ohlc_data['symbol'] = bitstamp_data['pair']
-
-        # TEST
+        # Set the symbol for the data
         ohlc_data['symbol'] = 'SCHEDULER_TEST'
-        # ohlc_data['symbol'] = 'HUMAN_TEST'
 
         # Convert the timestamp to datetime and localize it to UTC
         dt = datetime.fromtimestamp(int(ohlc_data['unix']), tz=pytz.UTC)
+
         # Convert the datetime to Kuala Lumpur time
         kl_time = dt.astimezone(pytz.timezone('Asia/Kuala_Lumpur'))
         ohlc_data['local_date'] = kl_time.strftime('%Y-%m-%dT%H:%M:%S')
 
-        # Convert 'volume' and 'close' to float before multiplication
+        # Calculate the volume in USD
         ohlc_data['volume_usd'] = round(float(ohlc_data['volume_btc']) * float(ohlc_data['close']), 10)
         
+        # Convert the data to JSON
         ohlc_json = json.dumps(ohlc_data)
 
-        # Convert the string to a dictionary
+        # Convert the JSON to a dictionary
         ohlc_data_dict = json.loads(ohlc_json)
 
     except Exception as e:
-        print(e)
+        # Log any errors that occur when calling the Bitstamp API
         error = {
             "error_message": e.message if hasattr(e, 'message') else str(e),
             "error_source": 'when calling bitstamp official api',
@@ -109,14 +114,14 @@ def call_bitsamp_api(ohlc_url,api_endpoint,error_log_url):
         requests.post(error_log_url, data=error)
         
     try:
+        # Post the processed data to the specified endpoint
         response = requests.post(api_endpoint, json=ohlc_data_dict)
-        print('api_endpoint:',api_endpoint, 'response:',response.status_code, 'response:',response.text)
-        logger.info(f'api_endpoint: {api_endpoint} status: {response.status_code} response: {response.text}')
+
+        # Log the response
         if response.status_code == 200:
             print('Data successfully added to the database')
-            logger.info('Data successfully added to the database')
         else:
-
+            # Log any errors that occur when posting the data
             error_data = {
                 "error_source": 'Bitstamp API',
                 "error_type": response.text,
@@ -125,6 +130,7 @@ def call_bitsamp_api(ohlc_url,api_endpoint,error_log_url):
             }
             requests.post(error_log_url, json=error_data)
     except requests.exceptions.RequestException as e:
+        # Log any exceptions that occur when posting the data
         error_data = {
         "error_source": 'Bitstamp API',
         "error_type": response.text,
@@ -134,6 +140,15 @@ def call_bitsamp_api(ohlc_url,api_endpoint,error_log_url):
         requests.post(error_log_url, json=error_data)
         print(e)
 
+"""
+Saves 5minutely,hourly,daily data from the Bitstamp API.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+
+Returns:
+    HttpResponse: A response indicating that the Bitstamp API minutely data has been triggered.
+"""
 @api_view(['GET'])
 def save_bitstamp_hourly(request):
     call_bitsamp_api(ohlc_url,hour_url,error_log_url)
@@ -146,10 +161,41 @@ def save_bitstamp_daily(request):
 
 @api_view(['GET'])
 def save_bitstamp_minutely(request):
-    call_bitsamp_api(ohlc_url,minute_url,error_log_url)
+    call_bitsamp_api(ohlc_url, minute_url, error_log_url)
     return HttpResponse("Triggered Bitstamp API minutely data")
+      
            
+"""
+Retrieve all posts.
 
+This function retrieves all posts from the database and returns them as a JSON response.
+
+Parameters:
+- request: The HTTP request object.
+
+Returns:
+- Response: A JSON response containing all the posts.
+
+Example:
+GET /all_post/
+Response:
+[
+    {
+            "id": 13,
+            "post_id": "1ax2n22",
+            "title": "SHA-256 Under the Hood",
+            "raw_text": "",
+            "created_at": "2024-02-22T17:46:47Z",
+            "added_at": "2024-02-22T10:08:08.580246Z",
+            "platform_source": "Reddit",
+            "post_url": "/r/Bitcoin/comments/1ax2n22/sha256_under_the_hood/",
+            "author_name": "pickeydotai",
+            "author_id": "7kgjzha1s",
+            "post_score": 1,
+            "status": "PENDING"
+        },
+]
+"""
 @api_view(['GET'])
 def all_post(request):
     all_post = PostRaw.objects.all()
@@ -165,17 +211,42 @@ def all_post(request):
 
 @api_view(['GET'])
 def get_post_by_id(request, post_id):
+    """
+    Retrieve a post by its ID.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        post_id (int): The ID of the post to retrieve.
+
+    Returns:
+        Response: The serialized data of the retrieved post.
+
+    Raises:
+        PostRaw.DoesNotExist: If the post with the given ID does not exist.
+    """
     try:
         post = PostRaw.objects.get(post_id=post_id)
         serializer = PostRawSerializer(post)
         return Response(serializer.data)
     except PostRaw.DoesNotExist:
-        # return HttpResponse(status=404)
         logger.error(f'Post with post_id {post_id} not found', status=status.HTTP_404_NOT_FOUND)
         return Response({'error': f'Post with post_id {post_id} not found'}, status=status.HTTP_404_NOT_FOUND)
 
 @api_view(['GET'])
 def get_post_by_status(request, status):
+    """
+    Retrieve posts by status.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        status (str): The status of the posts to retrieve.
+
+    Returns:
+        Response: The HTTP response containing the serialized posts.
+
+    Raises:
+        PostRaw.DoesNotExist: If no posts with the given status are found.
+    """
     try:
         # posts = PostRaw.objects.filter(status=status)
         posts = PostRaw.objects.filter(status=status)[:20]
@@ -191,6 +262,16 @@ def get_post_by_status(request, status):
 
 @api_view(['POST'])
 def add_error_log(request):
+    """
+    API view to add an error log to the database.
+
+    Parameters:
+    - request: The HTTP request object.
+
+    Returns:
+    - If the serializer is valid, returns the serialized data with a response status of 200.
+    - If the serializer is invalid, returns the serialized errors with a response status of 400.
+    """
     serializer = ErrorLogSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
@@ -207,6 +288,16 @@ def add_error_log(request):
 
 @api_view(['POST'])
 def add_bitstamp(request):
+    """
+    Add Bitstamp data to the database.
+
+    Parameters:
+    - request: The HTTP request object.
+
+    Returns:
+    - If the serializer is valid, returns the serialized data.
+    - If the serializer is invalid, returns the serializer errors.
+    """
     serializer = BitstampDataSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
@@ -215,6 +306,16 @@ def add_bitstamp(request):
 
 @api_view(['POST'])
 def add_bitstamphour(request):
+    """
+    Add Bitstamp data for an hour.
+
+    Args:
+        request (Request): The HTTP request object.
+
+    Returns:
+        Response: The HTTP response object containing the serialized data if valid, 
+        or the errors if invalid.
+    """
     serializer = BitstampDataHourSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
@@ -223,6 +324,17 @@ def add_bitstamphour(request):
 
 @api_view(['POST'])
 def add_bitstampminute(request):
+    """
+    Add a new Bitstamp minute data entry.
+
+    Parameters:
+    - request: The HTTP request object containing the data to be serialized.
+
+    Returns:
+    - If the data is valid, returns the serialized data of the newly created entry.
+    - If the data is invalid, returns the errors from the serializer.
+
+    """
     serializer = BitstampDataMinuteSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
@@ -230,6 +342,15 @@ def add_bitstampminute(request):
     return Response(serializer.errors)
 
 def scrap_today(request):
+    """
+    Scrapes the top 100 hot submissions from specified Bitcoin-related subreddits and saves them to the database if they were posted today.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        An HTTP response with the message "Hello, World!".
+    """
     reddit = praw.Reddit(client_id='mTF5k367VUFFmQ', client_secret='mjhD5xlOjtzDM8uovN9mzkhVOC2KbA', user_agent='User-Agent: Mozilla/5.0')
     top_btc_subreddit = ['CryptoCurrencyTrading','btc','BitcoinBeginners','Bitcoin']
     now = datetime.now()
@@ -238,7 +359,7 @@ def scrap_today(request):
         subreddit = reddit.subreddit(sub)
         # Get the current date and time
         
-        for submission in subreddit.hot(limit=5): 
+        for submission in subreddit.hot(limit=100): 
             print('Scrapping from:',sub)
             # Convert the submission's timestamp to a datetime object
             submission_time = datetime.fromtimestamp(submission.created_utc)
@@ -284,43 +405,3 @@ def scrap_today(request):
                 print("Post was not created today")
 
     return HttpResponse("Hello, World!")
-
-# from django.shortcuts import render, get_object_or_404, redirect
-# from .models import Bitstamp
-# from .forms import BitstampForm
-
-# def bitstamp_list(request):
-#     bitstamps = Bitstamp.objects.all()
-#     return render(request, 'bitstamp/bitstamp_list.html', {'bitstamps': bitstamps})
-
-# def bitstamp_detail(request, pk):
-#     bitstamp = get_object_or_404(Bitstamp, pk=pk)
-#     return render(request, 'bitstamp/bitstamp_detail.html', {'bitstamp': bitstamp})
-
-# def bitstamp_create(request):
-#     if request.method == "POST":
-#         form = BitstampForm(request.POST)
-#         if form.is_valid():
-#             bitstamp = form.save(commit=False)
-#             bitstamp.save()
-#             return redirect('bitstamp_detail', pk=bitstamp.pk)
-#     else:
-#         form = BitstampForm()
-#     return render(request, 'bitstamp/bitstamp_form.html', {'form': form})
-
-# def bitstamp_update(request, pk):
-#     bitstamp = get_object_or_404(Bitstamp, pk=pk)
-#     if request.method == "POST":
-#         form = BitstampForm(request.POST, instance=bitstamp)
-#         if form.is_valid():
-#             bitstamp = form.save(commit=False)
-#             bitstamp.save()
-#             return redirect('bitstamp_detail', pk=bitstamp.pk)
-#     else:
-#         form = BitstampForm(instance=bitstamp)
-#     return render(request, 'bitstamp/bitstamp_form.html', {'form': form})
-
-# def bitstamp_delete(request, pk):
-#     bitstamp = get_object_or_404(Bitstamp, pk=pk)
-#     bitstamp.delete()
-#     return redirect('bitstamp_list')
