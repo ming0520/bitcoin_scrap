@@ -29,7 +29,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 
 # Creating a logger object
 logger = logging.getLogger()
-
+    
 def dashboard_with_pivot(request):
     return render(request, 'dashboard_with_pivot.html', {})
 

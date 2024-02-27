@@ -41,7 +41,12 @@ INSTALLED_APPS = [
     "rest_framework",
 
     "scrap",
+    "user.apps.UserConfig",
 ]
+
+LOGIN_REDIRECT_URL = '/scrap/'  # Specify the path directly
+LOGOUT_REDIRECT_URL = "/login/"
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
