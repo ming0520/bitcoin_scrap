@@ -1720,3 +1720,5 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'scrap' not found. 'scrap' is
 2024-02-28 00:24:11,746 - INFO - C:\Other Project\Ads\Bitcoin Scraping\scrapperE\user\views.py changed, reloading.
 2024-02-28 00:24:26,494 - WARNING - Not Found: /logout/user/logout.html
 2024-02-28 00:25:00,964 - INFO - C:\Other Project\Ads\Bitcoin Scraping\scrapperE\user\views.py changed, reloading.
+2024-02-28 00:25:05,032 - WARNING - Not Found: /llogin
+2024-02-28 00:28:25,505 - WARNING - Not Found: /scrap.
