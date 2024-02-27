@@ -14,6 +14,7 @@ class PostRaw(models.Model):
     author_name = models.CharField(max_length=300)
     author_id = models.CharField(max_length=50)
     post_score = models.IntegerField()
+    status = models.CharField(default='PENDING',max_length=10)
 
     def __str__(self):
         return self.title
@@ -28,6 +29,7 @@ class CommentRaw(models.Model):
     comment_body = models.TextField()
     author_name = models.CharField(max_length=100)
     author_id = models.CharField(max_length=50)
+    status = models.CharField(default='PENDING',max_length=10)
 
     def __str__(self):
         return f"Comment on {self.post.title}"
