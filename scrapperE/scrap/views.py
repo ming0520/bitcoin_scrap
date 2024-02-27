@@ -1,20 +1,23 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
-# from django.core import serializers
-from django.core.serializers import serialize
+from django.core import serializers
+# from django.core.serializers import serialize
 from django.utils.timezone import make_aware
+from django.db import connections
+from django.db.models import Count
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
 
-from .models import PostRaw,CommentRaw,ErrorPost,BitstampData,ErrorLog
+from .models import PostRaw,CommentRaw,ErrorPost,BitstampData,ErrorLog,BitstampDataHour,BitstampDataMinute
 from .serializers import PostRawSerializer,BitstampDataSerializer,BitstampDataHourSerializer,ErrorLogSerializer, BitstampDataMinuteSerializer
 
 
 import praw
 from datetime import datetime, timedelta
+import pandas as pd
 
 import json
 import requests
@@ -26,6 +29,30 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 
 # Creating a logger object
 logger = logging.getLogger()
+
+def dashboard_with_pivot(request):
+    return render(request, 'dashboard_with_pivot.html', {})
+
+# def dashboard_d3js(request):
+#     # dataset = BitstampDataHour.objects.all()[0:3]
+#     # data = serializers.serialize('json', dataset, fields=('local_date', 'close'))
+#     return render(request, 'dashboard_d3js.html')
+
+
+def bitcoin_hourly_data(request):
+    dataset = BitstampDataHour.objects.all()
+    data = serializers.serialize('json', dataset)
+    return JsonResponse(data, safe=False)
+
+def post_raw(request):
+    dataset = PostRaw.objects.all()
+    data = serializers.serialize('json', dataset)
+    return JsonResponse(data, safe=False)
+
+# def bitcoin_hourly_data_close(request):
+#     dataset = BitstampDataHour.objects.all()[0:3]
+#     data = serializers.serialize('json', dataset, fields=('local_date', 'close'))
+#     return JsonResponse(data, safe=False)
 
 currency_pair = "btcusd"
 # ohlc_url = f"https://www.bitstamp.net/api/v2/ticker/{currency_pair}/"
