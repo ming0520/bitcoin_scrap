@@ -2,9 +2,12 @@
 
 ScrapperE: Your comprehensive toolkit for web scraping, real-time Bitcoin price retrieval via an API, and efficient task scheduling by using django.
 
-## Navigate to Literature Review
+## Documentation
 
+For more details about the views function, please refer to [Views Readme](scrapperE/scrap/ViewsReadme.md)
 For more details about the literature review, please refer to [Literature Review](LiteratureReview.md)
+For more details about the API, please refer to [Literature Review](APIUsage.md)
+For more data sources, please navigate to [Additional Datasource](Additional_Datasource.md)
 
 ## How ScrapperE Works
 
@@ -16,8 +19,6 @@ Here is a journey map that illustrates how ScrapperE works:
 Here is a sequence diagram that illustrates the flow of the ScrapperE:
 
 ![BitcoinScrapJourney-Sequence Diagram](BitcoinScrapJourney-SequenceDiagrm.drawio.png)
-
-
 
 
 ## Prerequisites
@@ -106,10 +107,6 @@ set PYTHONIOENCODING=utf-8
 python manage.py dumpdata > database_dump.json
 ```
 
-## Navigate to Views
-
-For more details about the views, please refer to [Views Readme](scrapperE/scrap/ViewsReadme.md)
-
 ## Creating a Scheduler in Windows
 
 To automate the scraping process, you can create a scheduler in Windows. Here are the steps:
@@ -154,8 +151,6 @@ Now, the script will run automatically at the time you set, scraping data and sa
 2. [Bitcoin - A Peer to Peer Electronic Cash System](https://www.reddit.com/r/btc/)
 3. [Bitcoin for Beginners](https://www.reddit.com/r/BitcoinBeginners/)
 4. [Bitcoin - The Currency of the Internet](https://www.reddit.com/r/Bitcoin/)
-
-For more data sources, please navigate to [Additional Datasource](Additional_Datasource.md)
 
 ## Contact
 
