@@ -1,0 +1,32 @@
+{% extends "./base.html" %}
+{% load i18n %}
+
+{% block content %}
+<!-- this is the markup. you can change the details (your own name, your own avatar etc.) but don’t change the basic structure! -->
+<style>
+    
+</style>
+<aside class="profile-card">
+  
+    <header>
+      
+
+  
+      <!-- the username -->
+      <h1>{{ user.username }}</h1>
+      
+      <!-- and role or location -->
+      <h2>{{ user.email }}</h2>
+      
+    </header>
+    
+    <!-- bit of a bio; who are you? -->
+    <div class="profile-bio">
+      
+      <p>Session Started at: {{ user.last_login }}</p>
+      
+    </div>
+
+  </aside>
+  <!-- that’s all folks! -->
+{% endblock %}

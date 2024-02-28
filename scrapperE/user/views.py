@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from .forms import RegisterForm
 from django.contrib.auth import logout
+from django.views.generic import TemplateView
 # Create your views here.
  
 def register(request):
@@ -22,3 +23,6 @@ def user_logout(request):
 
 def logout_msg(request):
     return render(request,'user/logout.html')
+
+class AccountProfile(TemplateView):
+    template_name = 'user/account_profile.html'

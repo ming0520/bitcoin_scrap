@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from user import views as user_views
 from django.contrib.auth import views as auth_views
+from django.views.generic import TemplateView
+from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -28,4 +30,5 @@ urlpatterns = [
     # path('logout/',auth_views.LogoutView.as_view(template_name='user/logout.html'),name='logout'),
     path('logout/', user_views.user_logout, name='logout'),
     path('logout_msg/', user_views.logout_msg, name='logout_msg'),
+    path('accounts/profile/', login_required(TemplateView.as_view(template_name="user/account_profile.html")), name='account_profile'),
 ]
