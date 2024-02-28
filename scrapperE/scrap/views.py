@@ -202,12 +202,6 @@ Response:
 def all_post(request):
     all_post = PostRaw.objects.all()
     serializer = PostRawSerializer(all_post, many=True)
-    # data = serializers.serialize('json', all_post)
-    # return JsonResponse(data, safe=False)
-
-    # data = serialize('json', all_post, ensure_ascii=False)
-    # return JsonResponse(data, safe=False)
-    # all_post = {'name'  : 'all_post','age' : 25, 'city' : 'New York'}
     return Response(serializer.data)
 
 
