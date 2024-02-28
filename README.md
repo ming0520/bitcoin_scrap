@@ -1,10 +1,24 @@
 # ScrapperE
 
-ScrapperE is a Django project for web scraping.
+ScrapperE: Your comprehensive toolkit for web scraping, real-time Bitcoin price retrieval via an API, and efficient task scheduling by using django.
 
 ## Navigate to Literature Review
 
 For more details about the literature review, please refer to [Literature Review](LiteratureReview.md)
+
+## How ScrapperE Works
+
+Here is a journey map that illustrates how ScrapperE works:
+
+![BitcoinScrapJourney-Journey Map](BitcoinScrapJourney-JourneyMap.drawio.png)
+## Sequence Diagram
+
+Here is a sequence diagram that illustrates the flow of the ScrapperE:
+
+![BitcoinScrapJourney-Sequence Diagram](BitcoinScrapJourney-SequenceDiagrm.drawio.png)
+
+
+
 
 ## Prerequisites
 
