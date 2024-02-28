@@ -1,0 +1,8 @@
+  {% comment %}
+  <link rel="stylesheet" href="https://cdn.flexmonster.com/demo.css" />
+  {% endcomment %} {% comment %}
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://cdn.flexmonster.com/lib/flexmonster.highcharts.js"></script>
+  {% endcomment %}
+
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
