@@ -6,6 +6,7 @@ from django.core import serializers
 from django.utils.timezone import make_aware
 from django.db import connections
 from django.db.models import Count
+from django.contrib.auth.decorators import login_required
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -29,7 +30,8 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 
 # Creating a logger object
 logger = logging.getLogger()
-    
+
+@login_required    
 def dashboard_with_pivot(request):
     return render(request, 'dashboard_with_pivot.html', {})
 

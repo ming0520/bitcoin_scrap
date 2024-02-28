@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
 LOGIN_REDIRECT_URL = '/scrap/'  # Specify the path directly
 LOGOUT_REDIRECT_URL = "/login/"
+LOGIN_URL = "/login/"
 
 
 MIDDLEWARE = [
