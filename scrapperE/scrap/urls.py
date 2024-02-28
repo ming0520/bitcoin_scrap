@@ -23,18 +23,4 @@ urlpatterns = [
     path('bitcoin_hourly_data', views.bitcoin_hourly_data, name='bitcoin_hourly_data'),
     path('post_raw_data', views.post_raw, name='post_raw_data'),
 
-    # path('', views.sneat, name='sneat'),
-
-    # path('', views.dashboard_d3js, name='dashboard_d3js'),
-    # path('bitcoin_hourly_data_close', views.bitcoin_hourly_data_close, name='bitcoin_hourly_data_close'),
-
-    # path("api/bitstamp/get_daily", views.get_bitstamp_daily, name="get_bitstamp_daily"),    
-
-    # Bitstamp Crud
-    # path('', views.bitstamp_list, name='bitstamp_list'),
-    # path('create/', views.bitstamp_create, name='bitstamp_create'),
-    # path('<int:pk>/', views.bitstamp_detail, name='bitstamp_detail'),
-    # path('<int:pk>/update/', views.bitstamp_update, name='bitstamp_update'),
-    # path('<int:pk>/delete/', views.bitstamp_delete, name='bitstamp_delete'),
 ]
-

@@ -1,18 +1,4 @@
 {% extends "./base.html" %}
-<!-- example source -->
-<!-- https://github.com/macdhuibh/django-registration-templates/blob/master/django_registration_templates/templates/account_profile.html -->
-<!-- https://carlofontanos.com/creating-a-registration-page-in-django/ -->
-<!-- https://www.geeksforgeeks.org/extends-django-template-tags/ -->
-<!-- https://stackoverflow.com/questions/3578882/how-to-specify-the-login-required-redirect-url-in-django -->
-<!-- https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url -->
-<!-- https://www.pythontutorial.net/django-tutorial/django-registration/ -->
-
-<!-- unused -->
-<!-- https://docs.djangoproject.com/en/5.0/topics/forms/ -->
-<!-- https://www.geeksforgeeks.org/how-to-create-a-form-using-django-forms/ -->
-<!-- https://stackoverflow.com/questions/16901970/django-register-and-login-explained-by-example -->
-<!-- https://www.sourcecodester.com/tutorials/python/11581/python-simple-registration-login-form-django.html -->
-<!-- https://www.csestack.org/django-sign-up-registration-form/ -->
 {% block content %}
     <div class="container">
         <form method="POST">
@@ -49,23 +35,6 @@
                                 {{ form.password2 }}
                             </div>
                         </div>
-                        <!-- <div class="form-group clearfix">
-                            <label for="{{ form.first_name.id_for_label }}" class="col-md-4 control-label text-right">First Name:</label>
-                            <div class="col-md-6">
-                                {{ form.first_name }}
-                            </div>
-                        </div>
-                        <div class="form-group clearfix">
-                            <label for="{{ form.last_name.id_for_label }}" class="col-md-4 control-label text-right">Last Name:</label>
-                            <div class="col-md-6">
-                                {{ form.last_name }}
-                            </div>
-                        </div>
-                        <div class="form-group clearfix">
-                            <label for="{{ form.phone_number.id_for_label }}" class="col-md-4 control-label text-right">Phone Number:</label>
-                            <div class="col-md-6">
-                                {{ form.phone_number }}
-                            </div> -->
                         </div>
                         <div class="col-md-6 col-md-offset-4">
                             <input type="submit" value="Register" class="btn btn-success">
