@@ -4,10 +4,10 @@ ScrapperE: Your comprehensive toolkit for web scraping, real-time Bitcoin price 
 
 ## Documentation
 
-For more details about the views function, please refer to [Views Readme](scrapperE/scrap/ViewsReadme.md)
-For more details about the literature review, please refer to [Literature Review](LiteratureReview.md)
-For more details about the API, please refer to [Literature Review](APIUsage.md)
-For more data sources, please navigate to [Additional Datasource](Additional_Datasource.md)
+1. For more details about the views function, please refer to [Views Readme](scrapperE/scrap/ViewsReadme.md)
+2. For more details about the literature review, please refer to [Literature Review](LiteratureReview.md)
+3. For more details about the API, please refer to [Literature Review](APIUsage.md)
+4. For more data sources, please navigate to [Additional Datasource](Additional_Datasource.md)
 
 ## How ScrapperE Works
 
