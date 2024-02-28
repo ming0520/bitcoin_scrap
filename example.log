@@ -5334,3 +5334,29 @@ Exception Value: cannot access local variable &#x27;data&#x27; where it is not a
 2024-02-27 10:05:06,852 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
 2024-02-27 10:05:08,047 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_minutely HTTP/1.1" 200 36
 2024-02-27 10:05:08,047 - INFO - switch_case: save_minutely, response: 200 ,result: Triggered Bitstamp API minutely data
+2024-02-28 13:16:26,544 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:16:33,710 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_minutely HTTP/1.1" 200 36
+2024-02-28 13:16:33,710 - INFO - switch_case: save_minutely, response: 200 ,result: Triggered Bitstamp API minutely data
+2024-02-28 13:16:40,582 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:16:41,224 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:16:41,486 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_daily HTTP/1.1" 200 33
+2024-02-28 13:16:41,486 - INFO - switch_case: save_daily, response: 200 ,result: Triggered Bitstamp API daily data
+2024-02-28 13:16:41,923 - DEBUG - http://127.0.0.1:8000 "GET /scrap/scrap_today HTTP/1.1" 301 None
+2024-02-28 13:16:41,924 - DEBUG - Resetting dropped connection: 127.0.0.1
+2024-02-28 13:16:42,979 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:16:44,545 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_hourly HTTP/1.1" 200 34
+2024-02-28 13:16:44,545 - INFO - switch_case: save_hourly, response: 200 ,result: Triggered Bitstamp API hourly data
+2024-02-28 13:17:35,018 - DEBUG - http://127.0.0.1:8000 "GET /scrap/scrap_today/ HTTP/1.1" 200 13
+2024-02-28 13:17:35,019 - INFO - switch_case: scrap_today, response: 200 ,result: Hello, World!
+2024-02-28 13:17:50,491 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:17:52,014 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_minutely HTTP/1.1" 200 36
+2024-02-28 13:17:52,015 - INFO - switch_case: save_minutely, response: 200 ,result: Triggered Bitstamp API minutely data
+2024-02-28 13:18:16,152 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:18:17,586 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_daily HTTP/1.1" 200 33
+2024-02-28 13:18:17,588 - INFO - switch_case: save_daily, response: 200 ,result: Triggered Bitstamp API daily data
+2024-02-28 13:18:28,069 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:18:28,141 - DEBUG - http://127.0.0.1:8000 "GET /scrap/scrap_today HTTP/1.1" 301 None
+2024-02-28 13:18:28,193 - DEBUG - Resetting dropped connection: 127.0.0.1
+2024-02-28 13:18:38,141 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:18:39,414 - DEBUG - http://127.0.0.1:8000 "GET /scrap/api/bitstamp/save_hourly HTTP/1.1" 200 34
+2024-02-28 13:18:39,415 - INFO - switch_case: save_hourly, response: 200 ,result: Triggered Bitstamp API hourly data

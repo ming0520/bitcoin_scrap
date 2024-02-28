@@ -3567,3 +3567,480 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile
 2024-02-28 12:00:14,012 - WARNING - Not Found: /scrap/accounts/profile/
 2024-02-28 12:00:16,279 - INFO - C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrapperE\urls.py changed, reloading.
 2024-02-28 12:01:08,220 - INFO - C:\Other Project\Ads\Bitcoin Scraping\scrapperE\scrapperE\urls.py changed, reloading.
+2024-02-28 13:16:26,558 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-28 13:16:28,097 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-28 13:16:33,601 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:16:33,706 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-28 13:16:40,591 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-28 13:16:41,466 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-28 13:16:41,467 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:16:41,482 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstamp/add HTTP/1.1" 200 329
+2024-02-28 13:16:41,954 - DEBUG - Starting new HTTPS connection (1): pypi.org:443
+2024-02-28 13:16:42,982 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-28 13:16:43,331 - DEBUG - https://pypi.org:443 "GET /pypi/praw/json HTTP/1.1" 200 35676
+2024-02-28 13:16:43,622 - DEBUG - Fetching: GET https://oauth.reddit.com/r/CryptoCurrencyTrading/hot at 1709097403.6225104
+2024-02-28 13:16:43,622 - DEBUG - Data: None
+2024-02-28 13:16:43,623 - DEBUG - Params: {'limit': 100, 'raw_json': 1}
+2024-02-28 13:16:43,624 - DEBUG - Starting new HTTPS connection (1): www.reddit.com:443
+2024-02-28 13:16:44,489 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-28 13:16:44,519 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:16:44,533 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstamphour/add HTTP/1.1" 200 330
+2024-02-28 13:16:45,785 - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 200 642
+2024-02-28 13:16:45,788 - DEBUG - Starting new HTTPS connection (1): oauth.reddit.com:443
+2024-02-28 13:16:48,956 - DEBUG - https://oauth.reddit.com:443 "GET /r/CryptoCurrencyTrading/hot?limit=100&raw_json=1 HTTP/1.1" 200 61592
+2024-02-28 13:16:49,351 - DEBUG - Response: 200 (61592 bytes) (rst-193:rem-599.0:used-1 ratelimit) at 1709097409.3512313
+2024-02-28 13:16:49,397 - DEBUG - Fetching: GET https://oauth.reddit.com/user/dog-asmr2/about/ at 1709097409.3972692
+2024-02-28 13:16:49,397 - DEBUG - Data: None
+2024-02-28 13:16:49,397 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:16:50,131 - DEBUG - https://oauth.reddit.com:443 "GET /user/dog-asmr2/about/?raw_json=1 HTTP/1.1" 200 696
+2024-02-28 13:16:50,134 - DEBUG - Response: 200 (696 bytes) (rst-191:rem-598.0:used-2 ratelimit) at 1709097410.1342742
+2024-02-28 13:16:50,713 - DEBUG - Fetching: GET https://oauth.reddit.com/r/btc/hot at 1709097410.713645
+2024-02-28 13:16:50,713 - DEBUG - Data: None
+2024-02-28 13:16:50,713 - DEBUG - Params: {'limit': 100, 'raw_json': 1}
+2024-02-28 13:16:52,586 - DEBUG - https://oauth.reddit.com:443 "GET /r/btc/hot?limit=100&raw_json=1 HTTP/1.1" 200 91485
+2024-02-28 13:16:52,825 - DEBUG - Response: 200 (91485 bytes) (rst-190:rem-597.0:used-3 ratelimit) at 1709097412.8252068
+2024-02-28 13:16:52,846 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Incognitohand/about/ at 1709097412.8463197
+2024-02-28 13:16:52,847 - DEBUG - Data: None
+2024-02-28 13:16:52,847 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:16:53,284 - DEBUG - https://oauth.reddit.com:443 "GET /user/Incognitohand/about/?raw_json=1 HTTP/1.1" 200 816
+2024-02-28 13:16:53,286 - DEBUG - Response: 200 (816 bytes) (rst-188:rem-596.0:used-4 ratelimit) at 1709097413.286599
+2024-02-28 13:16:53,297 - DEBUG - Fetching: GET https://oauth.reddit.com/user/ooc17/about/ at 1709097413.2979753
+2024-02-28 13:16:53,297 - DEBUG - Data: None
+2024-02-28 13:16:53,297 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:16:53,754 - DEBUG - https://oauth.reddit.com:443 "GET /user/ooc17/about/?raw_json=1 HTTP/1.1" 200 923
+2024-02-28 13:16:53,754 - DEBUG - Response: 200 (923 bytes) (rst-187:rem-595.0:used-5 ratelimit) at 1709097413.7545507
+2024-02-28 13:16:53,764 - DEBUG - Fetching: GET https://oauth.reddit.com/user/HarcourtFMudd/about/ at 1709097413.7641428
+2024-02-28 13:16:53,764 - DEBUG - Data: None
+2024-02-28 13:16:53,764 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:16:54,201 - DEBUG - https://oauth.reddit.com:443 "GET /user/HarcourtFMudd/about/?raw_json=1 HTTP/1.1" 200 701
+2024-02-28 13:16:54,202 - DEBUG - Response: 200 (701 bytes) (rst-187:rem-594.0:used-6 ratelimit) at 1709097414.2026489
+2024-02-28 13:16:54,213 - DEBUG - Fetching: GET https://oauth.reddit.com/user/sekitozz/about/ at 1709097414.21326
+2024-02-28 13:16:54,213 - DEBUG - Data: None
+2024-02-28 13:16:54,213 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:16:54,650 - DEBUG - https://oauth.reddit.com:443 "GET /user/sekitozz/about/?raw_json=1 HTTP/1.1" 200 810
+2024-02-28 13:16:54,651 - DEBUG - Response: 200 (810 bytes) (rst-186:rem-593.0:used-7 ratelimit) at 1709097414.651975
+2024-02-28 13:16:54,661 - DEBUG - Fetching: GET https://oauth.reddit.com/user/thebitcoinmogul/about/ at 1709097414.6615446
+2024-02-28 13:16:54,661 - DEBUG - Data: None
+2024-02-28 13:16:54,661 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:16:55,105 - DEBUG - https://oauth.reddit.com:443 "GET /user/thebitcoinmogul/about/?raw_json=1 HTTP/1.1" 200 703
+2024-02-28 13:16:55,105 - DEBUG - Response: 200 (703 bytes) (rst-186:rem-592.0:used-8 ratelimit) at 1709097415.1056476
+2024-02-28 13:16:55,124 - DEBUG - Fetching: GET https://oauth.reddit.com/user/btcle1/about/ at 1709097415.1243763
+2024-02-28 13:16:55,124 - DEBUG - Data: None
+2024-02-28 13:16:55,124 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:16:55,555 - DEBUG - https://oauth.reddit.com:443 "GET /user/btcle1/about/?raw_json=1 HTTP/1.1" 200 693
+2024-02-28 13:16:55,556 - DEBUG - Response: 200 (693 bytes) (rst-186:rem-591.0:used-9 ratelimit) at 1709097415.5561206
+2024-02-28 13:16:55,571 - DEBUG - Fetching: GET https://oauth.reddit.com/user/jormpt/about/ at 1709097415.5716825
+2024-02-28 13:16:55,571 - DEBUG - Data: None
+2024-02-28 13:16:55,571 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:16:56,027 - DEBUG - https://oauth.reddit.com:443 "GET /user/jormpt/about/?raw_json=1 HTTP/1.1" 200 826
+2024-02-28 13:16:56,028 - DEBUG - Response: 200 (826 bytes) (rst-185:rem-590.0:used-10 ratelimit) at 1709097416.0287218
+2024-02-28 13:16:56,043 - DEBUG - Fetching: GET https://oauth.reddit.com/user/alpastor420/about/ at 1709097416.0432281
+2024-02-28 13:16:56,043 - DEBUG - Data: None
+2024-02-28 13:16:56,043 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:16:56,472 - DEBUG - https://oauth.reddit.com:443 "GET /user/alpastor420/about/?raw_json=1 HTTP/1.1" 200 823
+2024-02-28 13:16:56,473 - DEBUG - Response: 200 (823 bytes) (rst-185:rem-589.0:used-11 ratelimit) at 1709097416.4738111
+2024-02-28 13:16:56,518 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Incognitohand/about/ at 1709097416.5186007
+2024-02-28 13:16:56,519 - DEBUG - Data: None
+2024-02-28 13:16:56,519 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:16:56,960 - DEBUG - https://oauth.reddit.com:443 "GET /user/Incognitohand/about/?raw_json=1 HTTP/1.1" 200 816
+2024-02-28 13:16:56,963 - DEBUG - Response: 200 (816 bytes) (rst-184:rem-588.0:used-12 ratelimit) at 1709097416.9630306
+2024-02-28 13:16:57,804 - DEBUG - Fetching: GET https://oauth.reddit.com/r/BitcoinBeginners/hot at 1709097417.8046906
+2024-02-28 13:16:57,805 - DEBUG - Data: None
+2024-02-28 13:16:57,805 - DEBUG - Params: {'limit': 100, 'raw_json': 1}
+2024-02-28 13:16:59,133 - DEBUG - https://oauth.reddit.com:443 "GET /r/BitcoinBeginners/hot?limit=100&raw_json=1 HTTP/1.1" 200 43718
+2024-02-28 13:16:59,308 - DEBUG - Response: 200 (43718 bytes) (rst-183:rem-587.0:used-13 ratelimit) at 1709097419.3083153
+2024-02-28 13:16:59,324 - DEBUG - Fetching: GET https://oauth.reddit.com/user/No-Buyer6279/about/ at 1709097419.3242414
+2024-02-28 13:16:59,324 - DEBUG - Data: None
+2024-02-28 13:16:59,324 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:16:59,767 - DEBUG - https://oauth.reddit.com:443 "GET /user/No-Buyer6279/about/?raw_json=1 HTTP/1.1" 200 700
+2024-02-28 13:16:59,768 - DEBUG - Response: 200 (700 bytes) (rst-181:rem-586.0:used-14 ratelimit) at 1709097419.7681487
+2024-02-28 13:16:59,777 - DEBUG - Fetching: GET https://oauth.reddit.com/user/FoodWaterShelter/about/ at 1709097419.7778473
+2024-02-28 13:16:59,777 - DEBUG - Data: None
+2024-02-28 13:16:59,777 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:00,234 - DEBUG - https://oauth.reddit.com:443 "GET /user/FoodWaterShelter/about/?raw_json=1 HTTP/1.1" 200 932
+2024-02-28 13:17:00,235 - DEBUG - Response: 200 (932 bytes) (rst-181:rem-585.0:used-15 ratelimit) at 1709097420.235752
+2024-02-28 13:17:00,245 - DEBUG - Fetching: GET https://oauth.reddit.com/user/edwardblilley/about/ at 1709097420.2451344
+2024-02-28 13:17:00,245 - DEBUG - Data: None
+2024-02-28 13:17:00,245 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:00,683 - DEBUG - https://oauth.reddit.com:443 "GET /user/edwardblilley/about/?raw_json=1 HTTP/1.1" 200 906
+2024-02-28 13:17:00,684 - DEBUG - Response: 200 (906 bytes) (rst-180:rem-584.0:used-16 ratelimit) at 1709097420.6844592
+2024-02-28 13:17:00,693 - DEBUG - Fetching: GET https://oauth.reddit.com/user/mercury_1969/about/ at 1709097420.693325
+2024-02-28 13:17:00,693 - DEBUG - Data: None
+2024-02-28 13:17:00,693 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:01,208 - DEBUG - https://oauth.reddit.com:443 "GET /user/mercury_1969/about/?raw_json=1 HTTP/1.1" 200 809
+2024-02-28 13:17:01,209 - DEBUG - Response: 200 (809 bytes) (rst-180:rem-583.0:used-17 ratelimit) at 1709097421.209605
+2024-02-28 13:17:01,227 - DEBUG - Fetching: GET https://oauth.reddit.com/user/tonysobrano/about/ at 1709097421.2273765
+2024-02-28 13:17:01,227 - DEBUG - Data: None
+2024-02-28 13:17:01,227 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:01,661 - DEBUG - https://oauth.reddit.com:443 "GET /user/tonysobrano/about/?raw_json=1 HTTP/1.1" 200 923
+2024-02-28 13:17:01,663 - DEBUG - Response: 200 (923 bytes) (rst-179:rem-582.0:used-18 ratelimit) at 1709097421.6634254
+2024-02-28 13:17:01,769 - DEBUG - Fetching: GET https://oauth.reddit.com/user/idrankleanonce/about/ at 1709097421.7692523
+2024-02-28 13:17:01,770 - DEBUG - Data: None
+2024-02-28 13:17:01,770 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:02,222 - DEBUG - https://oauth.reddit.com:443 "GET /user/idrankleanonce/about/?raw_json=1 HTTP/1.1" 200 840
+2024-02-28 13:17:02,223 - DEBUG - Response: 200 (840 bytes) (rst-179:rem-581.0:used-19 ratelimit) at 1709097422.223829
+2024-02-28 13:17:02,261 - DEBUG - Fetching: GET https://oauth.reddit.com/user/RbxBM/about/ at 1709097422.2616997
+2024-02-28 13:17:02,261 - DEBUG - Data: None
+2024-02-28 13:17:02,261 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:02,697 - DEBUG - https://oauth.reddit.com:443 "GET /user/RbxBM/about/?raw_json=1 HTTP/1.1" 200 821
+2024-02-28 13:17:02,698 - DEBUG - Response: 200 (821 bytes) (rst-178:rem-580.0:used-20 ratelimit) at 1709097422.6980517
+2024-02-28 13:17:02,717 - DEBUG - Fetching: GET https://oauth.reddit.com/user/McProtege92/about/ at 1709097422.717074
+2024-02-28 13:17:02,717 - DEBUG - Data: None
+2024-02-28 13:17:02,717 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:03,224 - DEBUG - https://oauth.reddit.com:443 "GET /user/McProtege92/about/?raw_json=1 HTTP/1.1" 200 818
+2024-02-28 13:17:03,225 - DEBUG - Response: 200 (818 bytes) (rst-178:rem-579.0:used-21 ratelimit) at 1709097423.2255394
+2024-02-28 13:17:03,375 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Safe_Insect9995/about/ at 1709097423.3759916
+2024-02-28 13:17:03,376 - DEBUG - Data: None
+2024-02-28 13:17:03,376 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:03,831 - DEBUG - https://oauth.reddit.com:443 "GET /user/Safe_Insect9995/about/?raw_json=1 HTTP/1.1" 200 703
+2024-02-28 13:17:03,832 - DEBUG - Response: 200 (703 bytes) (rst-177:rem-578.0:used-22 ratelimit) at 1709097423.8328762
+2024-02-28 13:17:03,896 - DEBUG - Fetching: GET https://oauth.reddit.com/user/PotentialPossible359/about/ at 1709097423.896367
+2024-02-28 13:17:03,896 - DEBUG - Data: None
+2024-02-28 13:17:03,896 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:04,348 - DEBUG - https://oauth.reddit.com:443 "GET /user/PotentialPossible359/about/?raw_json=1 HTTP/1.1" 200 934
+2024-02-28 13:17:04,350 - DEBUG - Response: 200 (934 bytes) (rst-177:rem-577.0:used-23 ratelimit) at 1709097424.350754
+2024-02-28 13:17:04,480 - DEBUG - Fetching: GET https://oauth.reddit.com/user/formthemitten/about/ at 1709097424.4804301
+2024-02-28 13:17:04,480 - DEBUG - Data: None
+2024-02-28 13:17:04,480 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:04,927 - DEBUG - https://oauth.reddit.com:443 "GET /user/formthemitten/about/?raw_json=1 HTTP/1.1" 200 824
+2024-02-28 13:17:04,928 - DEBUG - Response: 200 (824 bytes) (rst-176:rem-576.0:used-24 ratelimit) at 1709097424.9281816
+2024-02-28 13:17:04,943 - DEBUG - Fetching: GET https://oauth.reddit.com/user/No-Subject-5617/about/ at 1709097424.9438567
+2024-02-28 13:17:04,943 - DEBUG - Data: None
+2024-02-28 13:17:04,944 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:05,402 - DEBUG - https://oauth.reddit.com:443 "GET /user/No-Subject-5617/about/?raw_json=1 HTTP/1.1" 200 700
+2024-02-28 13:17:05,403 - DEBUG - Response: 200 (700 bytes) (rst-176:rem-575.0:used-25 ratelimit) at 1709097425.4036317
+2024-02-28 13:17:05,442 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Centralized_Trash/about/ at 1709097425.442597
+2024-02-28 13:17:05,442 - DEBUG - Data: None
+2024-02-28 13:17:05,442 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:05,896 - DEBUG - https://oauth.reddit.com:443 "GET /user/Centralized_Trash/about/?raw_json=1 HTTP/1.1" 200 703
+2024-02-28 13:17:05,897 - DEBUG - Response: 200 (703 bytes) (rst-175:rem-574.0:used-26 ratelimit) at 1709097425.897685
+2024-02-28 13:17:06,008 - DEBUG - Fetching: GET https://oauth.reddit.com/user/jigglyscrumpy01/about/ at 1709097426.0087569
+2024-02-28 13:17:06,008 - DEBUG - Data: None
+2024-02-28 13:17:06,008 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:06,435 - DEBUG - https://oauth.reddit.com:443 "GET /user/jigglyscrumpy01/about/?raw_json=1 HTTP/1.1" 200 824
+2024-02-28 13:17:06,438 - DEBUG - Response: 200 (824 bytes) (rst-175:rem-573.0:used-27 ratelimit) at 1709097426.438857
+2024-02-28 13:17:06,465 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Amazing_Cockroach_72/about/ at 1709097426.465943
+2024-02-28 13:17:06,465 - DEBUG - Data: None
+2024-02-28 13:17:06,465 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:06,928 - DEBUG - https://oauth.reddit.com:443 "GET /user/Amazing_Cockroach_72/about/?raw_json=1 HTTP/1.1" 200 703
+2024-02-28 13:17:06,930 - DEBUG - Response: 200 (703 bytes) (rst-174:rem-572.0:used-28 ratelimit) at 1709097426.9305787
+2024-02-28 13:17:06,939 - DEBUG - Fetching: GET https://oauth.reddit.com/user/GTOTJ/about/ at 1709097426.9395795
+2024-02-28 13:17:06,939 - DEBUG - Data: None
+2024-02-28 13:17:06,939 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:07,377 - DEBUG - https://oauth.reddit.com:443 "GET /user/GTOTJ/about/?raw_json=1 HTTP/1.1" 200 1001
+2024-02-28 13:17:07,378 - DEBUG - Response: 200 (1001 bytes) (rst-174:rem-571.0:used-29 ratelimit) at 1709097427.3783402
+2024-02-28 13:17:07,387 - DEBUG - Fetching: GET https://oauth.reddit.com/user/MammothCharacter5600/about/ at 1709097427.3878582
+2024-02-28 13:17:07,388 - DEBUG - Data: None
+2024-02-28 13:17:07,388 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:07,826 - DEBUG - https://oauth.reddit.com:443 "GET /user/MammothCharacter5600/about/?raw_json=1 HTTP/1.1" 200 700
+2024-02-28 13:17:07,827 - DEBUG - Response: 200 (700 bytes) (rst-173:rem-570.0:used-30 ratelimit) at 1709097427.8276749
+2024-02-28 13:17:07,958 - DEBUG - Fetching: GET https://oauth.reddit.com/r/Bitcoin/hot at 1709097427.958929
+2024-02-28 13:17:07,960 - DEBUG - Data: None
+2024-02-28 13:17:07,960 - DEBUG - Params: {'limit': 100, 'raw_json': 1}
+2024-02-28 13:17:09,341 - DEBUG - https://oauth.reddit.com:443 "GET /r/Bitcoin/hot?limit=100&raw_json=1 HTTP/1.1" 200 84487
+2024-02-28 13:17:09,528 - DEBUG - Response: 200 (84487 bytes) (rst-173:rem-569.0:used-31 ratelimit) at 1709097429.5288985
+2024-02-28 13:17:09,548 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Miserable_Drink_8920/about/ at 1709097429.5485532
+2024-02-28 13:17:09,548 - DEBUG - Data: None
+2024-02-28 13:17:09,548 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:09,995 - DEBUG - https://oauth.reddit.com:443 "GET /user/Miserable_Drink_8920/about/?raw_json=1 HTTP/1.1" 200 870
+2024-02-28 13:17:09,995 - DEBUG - Response: 200 (870 bytes) (rst-171:rem-568.0:used-32 ratelimit) at 1709097429.995642
+2024-02-28 13:17:10,003 - DEBUG - Fetching: GET https://oauth.reddit.com/user/bigocreddit/about/ at 1709097430.0036545
+2024-02-28 13:17:10,003 - DEBUG - Data: None
+2024-02-28 13:17:10,003 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:10,437 - DEBUG - https://oauth.reddit.com:443 "GET /user/bigocreddit/about/?raw_json=1 HTTP/1.1" 200 692
+2024-02-28 13:17:10,438 - DEBUG - Response: 200 (692 bytes) (rst-171:rem-567.0:used-33 ratelimit) at 1709097430.4388158
+2024-02-28 13:17:10,469 - DEBUG - Fetching: GET https://oauth.reddit.com/user/never_settling/about/ at 1709097430.4696689
+2024-02-28 13:17:10,469 - DEBUG - Data: None
+2024-02-28 13:17:10,469 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:10,897 - DEBUG - https://oauth.reddit.com:443 "GET /user/never_settling/about/?raw_json=1 HTTP/1.1" 200 715
+2024-02-28 13:17:10,898 - DEBUG - Response: 200 (715 bytes) (rst-170:rem-566.0:used-34 ratelimit) at 1709097430.8985317
+2024-02-28 13:17:10,908 - DEBUG - Fetching: GET https://oauth.reddit.com/user/SamWouters/about/ at 1709097430.908355
+2024-02-28 13:17:10,908 - DEBUG - Data: None
+2024-02-28 13:17:10,908 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:11,336 - DEBUG - https://oauth.reddit.com:443 "GET /user/SamWouters/about/?raw_json=1 HTTP/1.1" 200 698
+2024-02-28 13:17:11,337 - DEBUG - Response: 200 (698 bytes) (rst-170:rem-565.0:used-35 ratelimit) at 1709097431.3372228
+2024-02-28 13:17:11,345 - DEBUG - Fetching: GET https://oauth.reddit.com/user/AlexBiel/about/ at 1709097431.345285
+2024-02-28 13:17:11,345 - DEBUG - Data: None
+2024-02-28 13:17:11,345 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:11,770 - DEBUG - https://oauth.reddit.com:443 "GET /user/AlexBiel/about/?raw_json=1 HTTP/1.1" 200 823
+2024-02-28 13:17:11,770 - DEBUG - Response: 200 (823 bytes) (rst-169:rem-564.0:used-36 ratelimit) at 1709097431.7703655
+2024-02-28 13:17:11,780 - DEBUG - Fetching: GET https://oauth.reddit.com/user/sub_RedditTor/about/ at 1709097431.780959
+2024-02-28 13:17:11,780 - DEBUG - Data: None
+2024-02-28 13:17:11,781 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:12,215 - DEBUG - https://oauth.reddit.com:443 "GET /user/sub_RedditTor/about/?raw_json=1 HTTP/1.1" 200 820
+2024-02-28 13:17:12,216 - DEBUG - Response: 200 (820 bytes) (rst-169:rem-563.0:used-37 ratelimit) at 1709097432.216721
+2024-02-28 13:17:12,226 - DEBUG - Fetching: GET https://oauth.reddit.com/user/atreyu051/about/ at 1709097432.2267041
+2024-02-28 13:17:12,226 - DEBUG - Data: None
+2024-02-28 13:17:12,226 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:12,658 - DEBUG - https://oauth.reddit.com:443 "GET /user/atreyu051/about/?raw_json=1 HTTP/1.1" 200 817
+2024-02-28 13:17:12,659 - DEBUG - Response: 200 (817 bytes) (rst-168:rem-562.0:used-38 ratelimit) at 1709097432.659252
+2024-02-28 13:17:12,668 - DEBUG - Fetching: GET https://oauth.reddit.com/user/ILostHalfaBTC/about/ at 1709097432.668888
+2024-02-28 13:17:12,668 - DEBUG - Data: None
+2024-02-28 13:17:12,668 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:13,117 - DEBUG - https://oauth.reddit.com:443 "GET /user/ILostHalfaBTC/about/?raw_json=1 HTTP/1.1" 200 709
+2024-02-28 13:17:13,118 - DEBUG - Response: 200 (709 bytes) (rst-168:rem-561.0:used-39 ratelimit) at 1709097433.1184669
+2024-02-28 13:17:13,126 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Aggressive_Fox_6940/about/ at 1709097433.1262252
+2024-02-28 13:17:13,126 - DEBUG - Data: None
+2024-02-28 13:17:13,126 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:13,562 - DEBUG - https://oauth.reddit.com:443 "GET /user/Aggressive_Fox_6940/about/?raw_json=1 HTTP/1.1" 200 834
+2024-02-28 13:17:13,563 - DEBUG - Response: 200 (834 bytes) (rst-168:rem-560.0:used-40 ratelimit) at 1709097433.5633485
+2024-02-28 13:17:13,577 - DEBUG - Fetching: GET https://oauth.reddit.com/user/suuperfli/about/ at 1709097433.5772297
+2024-02-28 13:17:13,577 - DEBUG - Data: None
+2024-02-28 13:17:13,577 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:14,031 - DEBUG - https://oauth.reddit.com:443 "GET /user/suuperfli/about/?raw_json=1 HTTP/1.1" 200 867
+2024-02-28 13:17:14,031 - DEBUG - Response: 200 (867 bytes) (rst-167:rem-559.0:used-41 ratelimit) at 1709097434.0312726
+2024-02-28 13:17:14,040 - DEBUG - Fetching: GET https://oauth.reddit.com/user/obsdude/about/ at 1709097434.0405037
+2024-02-28 13:17:14,040 - DEBUG - Data: None
+2024-02-28 13:17:14,040 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:14,488 - DEBUG - https://oauth.reddit.com:443 "GET /user/obsdude/about/?raw_json=1 HTTP/1.1" 200 714
+2024-02-28 13:17:14,488 - DEBUG - Response: 200 (714 bytes) (rst-167:rem-558.0:used-42 ratelimit) at 1709097434.4889421
+2024-02-28 13:17:14,497 - DEBUG - Fetching: GET https://oauth.reddit.com/user/clit_or_us/about/ at 1709097434.4978557
+2024-02-28 13:17:14,497 - DEBUG - Data: None
+2024-02-28 13:17:14,497 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:14,937 - DEBUG - https://oauth.reddit.com:443 "GET /user/clit_or_us/about/?raw_json=1 HTTP/1.1" 200 823
+2024-02-28 13:17:14,937 - DEBUG - Response: 200 (823 bytes) (rst-166:rem-557.0:used-43 ratelimit) at 1709097434.937969
+2024-02-28 13:17:14,946 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Typical-Ad7222/about/ at 1709097434.9463692
+2024-02-28 13:17:14,946 - DEBUG - Data: None
+2024-02-28 13:17:14,946 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:15,394 - DEBUG - https://oauth.reddit.com:443 "GET /user/Typical-Ad7222/about/?raw_json=1 HTTP/1.1" 200 722
+2024-02-28 13:17:15,395 - DEBUG - Response: 200 (722 bytes) (rst-166:rem-556.0:used-44 ratelimit) at 1709097435.3958492
+2024-02-28 13:17:15,404 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Lochskye/about/ at 1709097435.4043648
+2024-02-28 13:17:15,404 - DEBUG - Data: None
+2024-02-28 13:17:15,404 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:15,864 - DEBUG - https://oauth.reddit.com:443 "GET /user/Lochskye/about/?raw_json=1 HTTP/1.1" 200 926
+2024-02-28 13:17:15,864 - DEBUG - Response: 200 (926 bytes) (rst-165:rem-555.0:used-45 ratelimit) at 1709097435.8643863
+2024-02-28 13:17:15,873 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Digital_Mentor/about/ at 1709097435.8731399
+2024-02-28 13:17:15,873 - DEBUG - Data: None
+2024-02-28 13:17:15,873 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:16,318 - DEBUG - https://oauth.reddit.com:443 "GET /user/Digital_Mentor/about/?raw_json=1 HTTP/1.1" 200 887
+2024-02-28 13:17:16,318 - DEBUG - Response: 200 (887 bytes) (rst-165:rem-554.0:used-46 ratelimit) at 1709097436.3184085
+2024-02-28 13:17:16,327 - DEBUG - Fetching: GET https://oauth.reddit.com/user/RevolutionaryDot3330/about/ at 1709097436.3271518
+2024-02-28 13:17:16,327 - DEBUG - Data: None
+2024-02-28 13:17:16,327 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:16,771 - DEBUG - https://oauth.reddit.com:443 "GET /user/RevolutionaryDot3330/about/?raw_json=1 HTTP/1.1" 200 739
+2024-02-28 13:17:16,772 - DEBUG - Response: 200 (739 bytes) (rst-164:rem-553.0:used-47 ratelimit) at 1709097436.7729073
+2024-02-28 13:17:16,780 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Typical-Particular87/about/ at 1709097436.7806246
+2024-02-28 13:17:16,780 - DEBUG - Data: None
+2024-02-28 13:17:16,780 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:17,224 - DEBUG - https://oauth.reddit.com:443 "GET /user/Typical-Particular87/about/?raw_json=1 HTTP/1.1" 200 784
+2024-02-28 13:17:17,225 - DEBUG - Response: 200 (784 bytes) (rst-164:rem-552.0:used-48 ratelimit) at 1709097437.2259235
+2024-02-28 13:17:17,239 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Sunvaarhah/about/ at 1709097437.2396553
+2024-02-28 13:17:17,239 - DEBUG - Data: None
+2024-02-28 13:17:17,239 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:17,685 - DEBUG - https://oauth.reddit.com:443 "GET /user/Sunvaarhah/about/?raw_json=1 HTTP/1.1" 200 931
+2024-02-28 13:17:17,687 - DEBUG - Response: 200 (931 bytes) (rst-163:rem-551.0:used-49 ratelimit) at 1709097437.6874268
+2024-02-28 13:17:17,696 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Sithaun_Meefase/about/ at 1709097437.6963744
+2024-02-28 13:17:17,696 - DEBUG - Data: None
+2024-02-28 13:17:17,696 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:18,158 - DEBUG - https://oauth.reddit.com:443 "GET /user/Sithaun_Meefase/about/?raw_json=1 HTTP/1.1" 200 1028
+2024-02-28 13:17:18,159 - DEBUG - Response: 200 (1028 bytes) (rst-163:rem-550.0:used-50 ratelimit) at 1709097438.1593316
+2024-02-28 13:17:18,168 - DEBUG - Fetching: GET https://oauth.reddit.com/user/CaptainHoey/about/ at 1709097438.1680384
+2024-02-28 13:17:18,168 - DEBUG - Data: None
+2024-02-28 13:17:18,168 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:18,612 - DEBUG - https://oauth.reddit.com:443 "GET /user/CaptainHoey/about/?raw_json=1 HTTP/1.1" 200 795
+2024-02-28 13:17:18,613 - DEBUG - Response: 200 (795 bytes) (rst-163:rem-549.0:used-51 ratelimit) at 1709097438.6135178
+2024-02-28 13:17:18,622 - DEBUG - Fetching: GET https://oauth.reddit.com/user/yellowsockss/about/ at 1709097438.6228914
+2024-02-28 13:17:18,622 - DEBUG - Data: None
+2024-02-28 13:17:18,622 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:19,069 - DEBUG - https://oauth.reddit.com:443 "GET /user/yellowsockss/about/?raw_json=1 HTTP/1.1" 200 925
+2024-02-28 13:17:19,069 - DEBUG - Response: 200 (925 bytes) (rst-162:rem-548.0:used-52 ratelimit) at 1709097439.0696576
+2024-02-28 13:17:19,079 - DEBUG - Fetching: GET https://oauth.reddit.com/user/LkS86_/about/ at 1709097439.079425
+2024-02-28 13:17:19,079 - DEBUG - Data: None
+2024-02-28 13:17:19,079 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:19,520 - DEBUG - https://oauth.reddit.com:443 "GET /user/LkS86_/about/?raw_json=1 HTTP/1.1" 200 817
+2024-02-28 13:17:19,521 - DEBUG - Response: 200 (817 bytes) (rst-162:rem-547.0:used-53 ratelimit) at 1709097439.5214412
+2024-02-28 13:17:19,530 - DEBUG - Fetching: GET https://oauth.reddit.com/user/georgiabushes/about/ at 1709097439.5308516
+2024-02-28 13:17:19,530 - DEBUG - Data: None
+2024-02-28 13:17:19,530 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:19,974 - DEBUG - https://oauth.reddit.com:443 "GET /user/georgiabushes/about/?raw_json=1 HTTP/1.1" 200 697
+2024-02-28 13:17:19,975 - DEBUG - Response: 200 (697 bytes) (rst-161:rem-546.0:used-54 ratelimit) at 1709097439.975332
+2024-02-28 13:17:19,988 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Kelseylicioius/about/ at 1709097439.988171
+2024-02-28 13:17:19,989 - DEBUG - Data: None
+2024-02-28 13:17:19,989 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:20,421 - DEBUG - https://oauth.reddit.com:443 "GET /user/Kelseylicioius/about/?raw_json=1 HTTP/1.1" 200 696
+2024-02-28 13:17:20,422 - DEBUG - Response: 200 (696 bytes) (rst-161:rem-545.0:used-55 ratelimit) at 1709097440.422404
+2024-02-28 13:17:20,437 - DEBUG - Fetching: GET https://oauth.reddit.com/user/citadelian/about/ at 1709097440.437985
+2024-02-28 13:17:20,437 - DEBUG - Data: None
+2024-02-28 13:17:20,437 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:20,889 - DEBUG - https://oauth.reddit.com:443 "GET /user/citadelian/about/?raw_json=1 HTTP/1.1" 200 814
+2024-02-28 13:17:20,890 - DEBUG - Response: 200 (814 bytes) (rst-160:rem-544.0:used-56 ratelimit) at 1709097440.8909614
+2024-02-28 13:17:20,902 - DEBUG - Fetching: GET https://oauth.reddit.com/user/hienyimba/about/ at 1709097440.9029672
+2024-02-28 13:17:20,902 - DEBUG - Data: None
+2024-02-28 13:17:20,902 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:21,354 - DEBUG - https://oauth.reddit.com:443 "GET /user/hienyimba/about/?raw_json=1 HTTP/1.1" 200 762
+2024-02-28 13:17:21,356 - DEBUG - Response: 200 (762 bytes) (rst-160:rem-543.0:used-57 ratelimit) at 1709097441.35603
+2024-02-28 13:17:21,366 - DEBUG - Fetching: GET https://oauth.reddit.com/user/GrandadsLadyFriend/about/ at 1709097441.366866
+2024-02-28 13:17:21,367 - DEBUG - Data: None
+2024-02-28 13:17:21,367 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:21,819 - DEBUG - https://oauth.reddit.com:443 "GET /user/GrandadsLadyFriend/about/?raw_json=1 HTTP/1.1" 200 934
+2024-02-28 13:17:21,821 - DEBUG - Response: 200 (934 bytes) (rst-159:rem-542.0:used-58 ratelimit) at 1709097441.8210645
+2024-02-28 13:17:21,830 - DEBUG - Fetching: GET https://oauth.reddit.com/user/ExitBest/about/ at 1709097441.830694
+2024-02-28 13:17:21,830 - DEBUG - Data: None
+2024-02-28 13:17:21,830 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:22,267 - DEBUG - https://oauth.reddit.com:443 "GET /user/ExitBest/about/?raw_json=1 HTTP/1.1" 200 690
+2024-02-28 13:17:22,267 - DEBUG - Response: 200 (690 bytes) (rst-159:rem-541.0:used-59 ratelimit) at 1709097442.2678175
+2024-02-28 13:17:22,277 - DEBUG - Fetching: GET https://oauth.reddit.com/user/watchitburn9309/about/ at 1709097442.2779756
+2024-02-28 13:17:22,277 - DEBUG - Data: None
+2024-02-28 13:17:22,277 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:22,708 - DEBUG - https://oauth.reddit.com:443 "GET /user/watchitburn9309/about/?raw_json=1 HTTP/1.1" 200 702
+2024-02-28 13:17:22,709 - DEBUG - Response: 200 (702 bytes) (rst-158:rem-540.0:used-60 ratelimit) at 1709097442.7094684
+2024-02-28 13:17:22,718 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Fit_Rooster2702/about/ at 1709097442.7189896
+2024-02-28 13:17:22,718 - DEBUG - Data: None
+2024-02-28 13:17:22,720 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:23,188 - DEBUG - https://oauth.reddit.com:443 "GET /user/Fit_Rooster2702/about/?raw_json=1 HTTP/1.1" 200 835
+2024-02-28 13:17:23,189 - DEBUG - Response: 200 (835 bytes) (rst-158:rem-539.0:used-61 ratelimit) at 1709097443.1899173
+2024-02-28 13:17:23,202 - DEBUG - Fetching: GET https://oauth.reddit.com/user/FisherKing77/about/ at 1709097443.2023494
+2024-02-28 13:17:23,202 - DEBUG - Data: None
+2024-02-28 13:17:23,202 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:23,636 - DEBUG - https://oauth.reddit.com:443 "GET /user/FisherKing77/about/?raw_json=1 HTTP/1.1" 200 689
+2024-02-28 13:17:23,637 - DEBUG - Response: 200 (689 bytes) (rst-157:rem-538.0:used-62 ratelimit) at 1709097443.6375046
+2024-02-28 13:17:23,649 - DEBUG - Fetching: GET https://oauth.reddit.com/user/TheVoidKilledMe/about/ at 1709097443.6496158
+2024-02-28 13:17:23,650 - DEBUG - Data: None
+2024-02-28 13:17:23,650 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:24,085 - DEBUG - https://oauth.reddit.com:443 "GET /user/TheVoidKilledMe/about/?raw_json=1 HTTP/1.1" 200 924
+2024-02-28 13:17:24,086 - DEBUG - Response: 200 (924 bytes) (rst-157:rem-537.0:used-63 ratelimit) at 1709097444.0868025
+2024-02-28 13:17:24,098 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Parking_Truck1403/about/ at 1709097444.0984051
+2024-02-28 13:17:24,098 - DEBUG - Data: None
+2024-02-28 13:17:24,098 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:24,533 - DEBUG - https://oauth.reddit.com:443 "GET /user/Parking_Truck1403/about/?raw_json=1 HTTP/1.1" 200 702
+2024-02-28 13:17:24,535 - DEBUG - Response: 200 (702 bytes) (rst-157:rem-536.0:used-64 ratelimit) at 1709097444.5349102
+2024-02-28 13:17:24,544 - DEBUG - Fetching: GET https://oauth.reddit.com/user/how_anonymous_can_1b/about/ at 1709097444.5446227
+2024-02-28 13:17:24,544 - DEBUG - Data: None
+2024-02-28 13:17:24,544 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:24,990 - DEBUG - https://oauth.reddit.com:443 "GET /user/how_anonymous_can_1b/about/?raw_json=1 HTTP/1.1" 200 769
+2024-02-28 13:17:24,990 - DEBUG - Response: 200 (769 bytes) (rst-156:rem-535.0:used-65 ratelimit) at 1709097444.9907787
+2024-02-28 13:17:25,000 - DEBUG - Fetching: GET https://oauth.reddit.com/user/yeet20feet/about/ at 1709097445.0003493
+2024-02-28 13:17:25,000 - DEBUG - Data: None
+2024-02-28 13:17:25,000 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:25,431 - DEBUG - https://oauth.reddit.com:443 "GET /user/yeet20feet/about/?raw_json=1 HTTP/1.1" 200 824
+2024-02-28 13:17:25,432 - DEBUG - Response: 200 (824 bytes) (rst-156:rem-534.0:used-66 ratelimit) at 1709097445.4325795
+2024-02-28 13:17:25,442 - DEBUG - Fetching: GET https://oauth.reddit.com/user/CJr_2021/about/ at 1709097445.442347
+2024-02-28 13:17:25,442 - DEBUG - Data: None
+2024-02-28 13:17:25,442 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:25,913 - DEBUG - https://oauth.reddit.com:443 "GET /user/CJr_2021/about/?raw_json=1 HTTP/1.1" 200 695
+2024-02-28 13:17:25,914 - DEBUG - Response: 200 (695 bytes) (rst-155:rem-533.0:used-67 ratelimit) at 1709097445.9142742
+2024-02-28 13:17:25,923 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Beneficial_King191/about/ at 1709097445.923793
+2024-02-28 13:17:25,923 - DEBUG - Data: None
+2024-02-28 13:17:25,923 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:26,377 - DEBUG - https://oauth.reddit.com:443 "GET /user/Beneficial_King191/about/?raw_json=1 HTTP/1.1" 200 825
+2024-02-28 13:17:26,377 - DEBUG - Response: 200 (825 bytes) (rst-155:rem-532.0:used-68 ratelimit) at 1709097446.3771355
+2024-02-28 13:17:26,387 - DEBUG - Fetching: GET https://oauth.reddit.com/user/cpt_charisma/about/ at 1709097446.3878047
+2024-02-28 13:17:26,387 - DEBUG - Data: None
+2024-02-28 13:17:26,387 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:26,844 - DEBUG - https://oauth.reddit.com:443 "GET /user/cpt_charisma/about/?raw_json=1 HTTP/1.1" 200 697
+2024-02-28 13:17:26,845 - DEBUG - Response: 200 (697 bytes) (rst-154:rem-531.0:used-69 ratelimit) at 1709097446.8459394
+2024-02-28 13:17:26,856 - DEBUG - Fetching: GET https://oauth.reddit.com/user/ProfessionalCamel536/about/ at 1709097446.8563402
+2024-02-28 13:17:26,856 - DEBUG - Data: None
+2024-02-28 13:17:26,856 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:27,293 - DEBUG - https://oauth.reddit.com:443 "GET /user/ProfessionalCamel536/about/?raw_json=1 HTTP/1.1" 200 939
+2024-02-28 13:17:27,295 - DEBUG - Response: 200 (939 bytes) (rst-154:rem-530.0:used-70 ratelimit) at 1709097447.2953315
+2024-02-28 13:17:27,303 - DEBUG - Fetching: GET https://oauth.reddit.com/user/NO75_NousRunner/about/ at 1709097447.3038635
+2024-02-28 13:17:27,305 - DEBUG - Data: None
+2024-02-28 13:17:27,305 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:27,758 - DEBUG - https://oauth.reddit.com:443 "GET /user/NO75_NousRunner/about/?raw_json=1 HTTP/1.1" 200 832
+2024-02-28 13:17:27,759 - DEBUG - Response: 200 (832 bytes) (rst-153:rem-529.0:used-71 ratelimit) at 1709097447.759285
+2024-02-28 13:17:27,769 - DEBUG - Fetching: GET https://oauth.reddit.com/user/elioavilamunoz/about/ at 1709097447.769428
+2024-02-28 13:17:27,769 - DEBUG - Data: None
+2024-02-28 13:17:27,769 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:28,210 - DEBUG - https://oauth.reddit.com:443 "GET /user/elioavilamunoz/about/?raw_json=1 HTTP/1.1" 200 819
+2024-02-28 13:17:28,211 - DEBUG - Response: 200 (819 bytes) (rst-153:rem-528.0:used-72 ratelimit) at 1709097448.2118845
+2024-02-28 13:17:28,321 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Themuzzman/about/ at 1709097448.3215184
+2024-02-28 13:17:28,322 - DEBUG - Data: None
+2024-02-28 13:17:28,322 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:28,776 - DEBUG - https://oauth.reddit.com:443 "GET /user/Themuzzman/about/?raw_json=1 HTTP/1.1" 200 904
+2024-02-28 13:17:28,777 - DEBUG - Response: 200 (904 bytes) (rst-152:rem-527.0:used-73 ratelimit) at 1709097448.7774897
+2024-02-28 13:17:28,787 - DEBUG - Fetching: GET https://oauth.reddit.com/user/dDreadBlades/about/ at 1709097448.7862213
+2024-02-28 13:17:28,787 - DEBUG - Data: None
+2024-02-28 13:17:28,787 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:29,217 - DEBUG - https://oauth.reddit.com:443 "GET /user/dDreadBlades/about/?raw_json=1 HTTP/1.1" 200 815
+2024-02-28 13:17:29,218 - DEBUG - Response: 200 (815 bytes) (rst-152:rem-526.0:used-74 ratelimit) at 1709097449.218541
+2024-02-28 13:17:29,227 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Joe_Smith_Reddit/about/ at 1709097449.2270107
+2024-02-28 13:17:29,227 - DEBUG - Data: None
+2024-02-28 13:17:29,227 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:29,669 - DEBUG - https://oauth.reddit.com:443 "GET /user/Joe_Smith_Reddit/about/?raw_json=1 HTTP/1.1" 200 830
+2024-02-28 13:17:29,670 - DEBUG - Response: 200 (830 bytes) (rst-151:rem-525.0:used-75 ratelimit) at 1709097449.6700249
+2024-02-28 13:17:29,680 - DEBUG - Fetching: GET https://oauth.reddit.com/user/NoResult486/about/ at 1709097449.6809163
+2024-02-28 13:17:29,680 - DEBUG - Data: None
+2024-02-28 13:17:29,680 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:30,113 - DEBUG - https://oauth.reddit.com:443 "GET /user/NoResult486/about/?raw_json=1 HTTP/1.1" 200 821
+2024-02-28 13:17:30,114 - DEBUG - Response: 200 (821 bytes) (rst-151:rem-524.0:used-76 ratelimit) at 1709097450.114203
+2024-02-28 13:17:30,125 - DEBUG - Fetching: GET https://oauth.reddit.com/user/bittercoin99/about/ at 1709097450.1252604
+2024-02-28 13:17:30,126 - DEBUG - Data: None
+2024-02-28 13:17:30,126 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:30,554 - DEBUG - https://oauth.reddit.com:443 "GET /user/bittercoin99/about/?raw_json=1 HTTP/1.1" 200 929
+2024-02-28 13:17:30,555 - DEBUG - Response: 200 (929 bytes) (rst-151:rem-523.0:used-77 ratelimit) at 1709097450.55589
+2024-02-28 13:17:30,568 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Average-Terrestrial/about/ at 1709097450.5680282
+2024-02-28 13:17:30,568 - DEBUG - Data: None
+2024-02-28 13:17:30,568 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:31,009 - DEBUG - https://oauth.reddit.com:443 "GET /user/Average-Terrestrial/about/?raw_json=1 HTTP/1.1" 200 836
+2024-02-28 13:17:31,649 - DEBUG - Response: 200 (836 bytes) (rst-150:rem-522.0:used-78 ratelimit) at 1709097451.6496348
+2024-02-28 13:17:31,664 - DEBUG - Fetching: GET https://oauth.reddit.com/user/RandomCommenter2183/about/ at 1709097451.6647475
+2024-02-28 13:17:31,664 - DEBUG - Data: None
+2024-02-28 13:17:31,664 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:32,245 - DEBUG - https://oauth.reddit.com:443 "GET /user/RandomCommenter2183/about/?raw_json=1 HTTP/1.1" 200 699
+2024-02-28 13:17:32,246 - DEBUG - Response: 200 (699 bytes) (rst-149:rem-521.0:used-79 ratelimit) at 1709097452.2467709
+2024-02-28 13:17:32,258 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Ekonexus/about/ at 1709097452.2589476
+2024-02-28 13:17:32,259 - DEBUG - Data: None
+2024-02-28 13:17:32,259 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:32,705 - DEBUG - https://oauth.reddit.com:443 "GET /user/Ekonexus/about/?raw_json=1 HTTP/1.1" 200 814
+2024-02-28 13:17:32,706 - DEBUG - Response: 200 (814 bytes) (rst-148:rem-520.0:used-80 ratelimit) at 1709097452.706705
+2024-02-28 13:17:32,716 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Ekonexus/about/ at 1709097452.7160645
+2024-02-28 13:17:32,716 - DEBUG - Data: None
+2024-02-28 13:17:32,717 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:33,192 - DEBUG - https://oauth.reddit.com:443 "GET /user/Ekonexus/about/?raw_json=1 HTTP/1.1" 200 814
+2024-02-28 13:17:33,193 - DEBUG - Response: 200 (814 bytes) (rst-148:rem-519.0:used-81 ratelimit) at 1709097453.1939473
+2024-02-28 13:17:33,209 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Present-Intention-62/about/ at 1709097453.209194
+2024-02-28 13:17:33,209 - DEBUG - Data: None
+2024-02-28 13:17:33,210 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:33,645 - DEBUG - https://oauth.reddit.com:443 "GET /user/Present-Intention-62/about/?raw_json=1 HTTP/1.1" 200 699
+2024-02-28 13:17:33,646 - DEBUG - Response: 200 (699 bytes) (rst-147:rem-518.0:used-82 ratelimit) at 1709097453.6466603
+2024-02-28 13:17:33,658 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Cryptophorus/about/ at 1709097453.6582596
+2024-02-28 13:17:33,658 - DEBUG - Data: None
+2024-02-28 13:17:33,658 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:34,093 - DEBUG - https://oauth.reddit.com:443 "GET /user/Cryptophorus/about/?raw_json=1 HTTP/1.1" 200 706
+2024-02-28 13:17:34,094 - DEBUG - Response: 200 (706 bytes) (rst-147:rem-517.0:used-83 ratelimit) at 1709097454.0941162
+2024-02-28 13:17:34,107 - DEBUG - Fetching: GET https://oauth.reddit.com/user/Affectionate-Bat4974/about/ at 1709097454.1078446
+2024-02-28 13:17:34,107 - DEBUG - Data: None
+2024-02-28 13:17:34,107 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:34,540 - DEBUG - https://oauth.reddit.com:443 "GET /user/Affectionate-Bat4974/about/?raw_json=1 HTTP/1.1" 200 831
+2024-02-28 13:17:34,541 - DEBUG - Response: 200 (831 bytes) (rst-147:rem-516.0:used-84 ratelimit) at 1709097454.541733
+2024-02-28 13:17:34,556 - DEBUG - Fetching: GET https://oauth.reddit.com/user/notfrontpage/about/ at 1709097454.556379
+2024-02-28 13:17:34,556 - DEBUG - Data: None
+2024-02-28 13:17:34,557 - DEBUG - Params: {'raw_json': 1}
+2024-02-28 13:17:35,007 - DEBUG - https://oauth.reddit.com:443 "GET /user/notfrontpage/about/?raw_json=1 HTTP/1.1" 200 703
+2024-02-28 13:17:35,008 - DEBUG - Response: 200 (703 bytes) (rst-146:rem-515.0:used-85 ratelimit) at 1709097455.008513
+2024-02-28 13:17:50,495 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-28 13:17:51,988 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-28 13:17:51,991 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:17:52,009 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstampminute/add HTTP/1.1" 200 327
+2024-02-28 13:18:16,156 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-28 13:18:17,565 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-28 13:18:17,567 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:18:17,583 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstamp/add HTTP/1.1" 200 329
+2024-02-28 13:18:28,199 - DEBUG - Fetching: GET https://oauth.reddit.com/r/CryptoCurrencyTrading/hot at 1709097508.1996772
+2024-02-28 13:18:28,199 - DEBUG - Data: None
+2024-02-28 13:18:28,199 - DEBUG - Params: {'limit': 100, 'raw_json': 1}
+2024-02-28 13:18:28,205 - DEBUG - Starting new HTTPS connection (1): www.reddit.com:443
+2024-02-28 13:18:29,616 - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 200 644
+2024-02-28 13:18:29,622 - DEBUG - Starting new HTTPS connection (1): oauth.reddit.com:443
+2024-02-28 13:18:32,666 - DEBUG - https://oauth.reddit.com:443 "GET /r/CryptoCurrencyTrading/hot?limit=100&raw_json=1 HTTP/1.1" 200 61588
+2024-02-28 13:18:32,937 - DEBUG - Response: 200 (61588 bytes) (rst-90:rem-514.0:used-86 ratelimit) at 1709097512.9376292
+2024-02-28 13:18:33,422 - DEBUG - Fetching: GET https://oauth.reddit.com/r/btc/hot at 1709097513.4225192
+2024-02-28 13:18:33,422 - DEBUG - Data: None
+2024-02-28 13:18:33,422 - DEBUG - Params: {'limit': 100, 'raw_json': 1}
+2024-02-28 13:18:34,868 - DEBUG - https://oauth.reddit.com:443 "GET /r/btc/hot?limit=100&raw_json=1 HTTP/1.1" 200 91240
+2024-02-28 13:18:35,152 - DEBUG - Response: 200 (91240 bytes) (rst-87:rem-513.0:used-87 ratelimit) at 1709097515.1524572
+2024-02-28 13:18:35,490 - DEBUG - Fetching: GET https://oauth.reddit.com/r/BitcoinBeginners/hot at 1709097515.4897683
+2024-02-28 13:18:35,490 - DEBUG - Data: None
+2024-02-28 13:18:35,490 - DEBUG - Params: {'limit': 100, 'raw_json': 1}
+2024-02-28 13:18:36,434 - DEBUG - https://oauth.reddit.com:443 "GET /r/BitcoinBeginners/hot?limit=100&raw_json=1 HTTP/1.1" 200 43663
+2024-02-28 13:18:36,678 - DEBUG - Response: 200 (43663 bytes) (rst-85:rem-512.0:used-88 ratelimit) at 1709097516.6789863
+2024-02-28 13:18:36,787 - DEBUG - Fetching: GET https://oauth.reddit.com/r/Bitcoin/hot at 1709097516.7876427
+2024-02-28 13:18:36,787 - DEBUG - Data: None
+2024-02-28 13:18:36,787 - DEBUG - Params: {'limit': 100, 'raw_json': 1}
+2024-02-28 13:18:38,106 - DEBUG - https://oauth.reddit.com:443 "GET /r/Bitcoin/hot?limit=100&raw_json=1 HTTP/1.1" 200 84736
+2024-02-28 13:18:38,144 - DEBUG - Starting new HTTPS connection (1): www.bitstamp.net:443
+2024-02-28 13:18:38,359 - DEBUG - Response: 200 (84736 bytes) (rst-84:rem-511.0:used-89 ratelimit) at 1709097518.359592
+2024-02-28 13:18:39,391 - DEBUG - https://www.bitstamp.net:443 "GET /api/v2/ohlc/btcusd/?step=3600&limit=1 HTTP/1.1" 200 None
+2024-02-28 13:18:39,392 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2024-02-28 13:18:39,411 - DEBUG - http://127.0.0.1:8000 "POST /scrap/api/bitstamphour/add HTTP/1.1" 200 330
