@@ -1,1 +1,0 @@
-ALTER DATABASE scrapper_experimentscrap_postraw CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
