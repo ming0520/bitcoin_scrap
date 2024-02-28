@@ -1,6 +1,8 @@
 # ScrapperE
 
-ScrapperE: Your comprehensive toolkit for web scraping, real-time Bitcoin price retrieval via an API, and efficient task scheduling by using django.
+1. ScrapperE: Your comprehensive toolkit for web scraping, real-time Bitcoin price retrieval via an API, and efficient task scheduling by using django.
+2. Please contact: Zhong Ming in Slack to gain github access
+3. https://github.com/ming0520/bitcoin_scrap
 
 ## Documentation
 
