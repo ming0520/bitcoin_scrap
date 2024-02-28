@@ -1,1 +1,6 @@
-<h1> You had been logout </h1>
+{% extends "./base.html" %}
+{% load i18n %}
+
+{% block content %}
+<p>{% trans "Logged out" %}</p>
+{% endblock %}
