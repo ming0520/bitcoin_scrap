@@ -186,3 +186,13 @@ This project uses the following license: `<license_name>`.
 - [ ]  Record google Daily number of Bitcoin search queries on Google
 - [ ]  Track ntweets Daily number of Twitter posts related to Bitcoins
 - [ ]  Monitor sent Daily sentiment ratio of Twitter posts related to Bitcoins
+
+
+## References
+
+- [Django Registration Templates](https://github.com/macdhuibh/django-registration-templates/blob/master/django_registration_templates/templates/account_profile.html)
+- [Creating a Registration Page in Django](https://carlofontanos.com/creating-a-registration-page-in-django/)
+- [Extends Django Template Tags](https://www.geeksforgeeks.org/extends-django-template-tags/)
+- [How to specify the login required redirect URL in Django](https://stackoverflow.com/questions/3578882/how-to-specify-the-login-required-redirect-url-in-django)
+- [Django Documentation: LOGIN_REDIRECT_URL](https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url)
+- [Django Registration Tutorial](https://www.pythontutorial.net/django-tutorial/django-registration/)
